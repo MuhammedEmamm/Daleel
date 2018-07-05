@@ -1,0 +1,379 @@
+<!-- Favicon and Touch Icons -->
+<link href="images/favicon.png" rel="shortcut icon" type="image/png">
+<link href="images/apple-touch-icon.png" rel="apple-touch-icon">
+<link href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="images/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+
+<link rel="stylesheet" href="css/clndr.css" type="text/css" />
+<header id="header" class="header-style-three">
+		<div class="topbar">
+			<div class="upper-topbar">
+				<div class="container">
+					<div class="row">
+												<div class="col col-sm-8">
+							<div class="contact-info">
+								<ul>
+									<li>
+										<i class="fa fa-map-marker"></i> {{charityContact.Address}}</li>
+									<li>
+										<i class="fa fa-mobile"></i> {{charityContact.Mobile}}</li>
+									<li>
+										<i class="fa fa-envelope-o"></i> {{charityContact.Email}}</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col col-sm-2">
+							<div class="social">
+								<ul>
+									<li><a ng-href="http://{{charityContact.FacebookCount}}"><i class="fa fa-facebook"></i></a></li>
+
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!-- end upper-topbar -->
+
+			
+
+		</div>
+		<!-- end top-bar -->
+
+		<nav class="navigation navbar navbar-default" id="main-navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="open-btn">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+				</div>
+				<div class="col-xs-11">
+					<div id="navbar" class="navbar-collapse collapse col-lg-8">
+						<button class="close-navbar">
+                                <i class="fa fa-close"></i>
+                            </button>
+						<ul class="nav navbar-nav">
+							<li>
+								<a href="#">الرئيسيه</a>
+
+							</li>
+							<li>
+								<a href="#about">من نحن</a>
+
+							</li>
+							<li>
+								<a href="#CSR">CSR</a>
+
+							</li>
+							<li>
+								<a href="#cases">الحالات</a>
+
+							</li>
+							<li>
+								<a href="#gallery">معرض الصور</a>
+
+							</li>
+							<li class="current">
+								<a href="#Events">الاحداث</a>
+
+							</li>
+							<li>
+								<a href="#programs">برامجنا</a>
+
+							</li>
+							<li>
+								<a href="#info">أخبار</a>
+							</li>
+                            <li>
+								<a href="#BloodBank">بنك الدم</a>
+							</li>
+							<li>
+								<a href="#contact">تواصل معنا</a>
+							</li>	<li >
+								<a href="#SeasonalProjects">مشاريع موسمية</a>
+							</li><li >
+								<a href="#Organizations">جمعيات</a>
+							</li><li >
+								<a href="#join-us">انضم لنا</a>
+							</li>
+						</ul>
+					</div>
+					<!-- end of nav-collapse -->
+
+
+				</div>
+								<div class="col-xs-1"><img style="width: 130px ; margin-right:-50%" src="images/preloder.png"></div>
+
+			</div>
+			<!-- end of container -->
+		</nav>
+</header>
+<!-- start page-wrapper -->
+<div class="page-wrapper causes-list-page">
+
+
+	<!-- start page-title -->
+	<section class="page-title"  style="height: 300px">
+		<div class="page-title-bg"></div>
+		<div class="container">
+			<div class="title-box">
+				<h1>
+					<span>الاحداث</span>
+				</h1>
+				<ol class="breadcrumb">
+					<li>
+						<a href="#">الرئيسيه</a>
+					</li>
+					<li class="active"> الاحداث</li>
+				</ol>
+			</div>
+		</div>
+		<!-- end container -->
+	</section>
+	<!-- end page-title -->
+
+
+	<!-- start causes-list-section -->
+	<section class="causes-list-section section-padding">
+		<div class="container">
+			<div class="row">
+				<div class="col col-md-9">
+
+					<div class="content">
+
+						<div class="calender">
+
+							<div class="cal1">
+								<div class="clndr">
+
+                                    <md-calendar class="fixed-calendar calender" ng-model="selectedDay" ng-click="myDateClick()"></md-calendar>
+
+								</div>
+							</div>
+						</div>
+
+						<div class="date">
+
+
+							<div id="txt"></div>
+
+							<div class="dmy">
+                                <div>{{mydate}}</div>
+                                <label>{{myDate | date:"EEEE, MMMM d, y"}}</label>
+                                
+                                
+								<span id="date"></span>
+                                <!--
+								<script type="text/javascript">
+									var mydate = new Date()
+									var year = mydate.getYear()
+									if (year < 1000)
+										year += 1900
+									var day = mydate.getDay()
+									var month = mydate.getMonth()
+									var daym = mydate.getDate()
+									if (daym < 10)
+										daym = "0" + daym
+									var dayarray = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
+									var montharray = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
+									document.getElementById("date").innerHTML = "" + dayarray[day] + ", " + montharray[month] + " " + daym + ", " + year + ""
+
+								</script>-->
+							</div>
+
+							<!--<h2> <a href="#EventsDetails">التفاصيل</a> </h2>-->
+
+						</div>
+
+					</div>
+
+					<div class="clear"></div>
+					<!-- end causes-list-box-wrapper -->
+				</div>
+				<!-- end col -->
+                
+               
+                
+				<div class="col col-md-3 sidebar-wrapper">
+					<div class="sidebar">
+						<div class="widget search-widget">
+							<form class="form" ng-submit="setgen()">
+								<div>
+									<input type="text" class="form-control" placeholder="أبحث باسم الحدث.." ng-model="eventsearch" >
+								
+								</div>
+								<br>
+									<button type="submit" class="btn">
+                                            <i class="fa fa-search"></i>ابحث
+                                        </button>
+							</form>
+						</div>
+<!--
+						<div class="widget recent-events">
+							
+								<select ng-model="case" ng-init="case = 0" style="border-radius: 20px ; color: #237c77 ; width: 100%; height: 30px" ng-change="changingFun()">
+									<option disabled ng-value="0">نوع الحالة </option>
+									<option ng-repeat="x in cases">{{x.Name}}</option>
+								</select>
+							
+						</div>
+
+						<div class="widget recent-events">
+							<select ng-model="reg" ng-init="reg = 0" style="border-radius: 20px ;color: #237c77 ; width: 100%; height: 30px" ng-change="changingFun()">
+									<option disabled ng-value="0">مكان الحالة </option>
+									<option ng-repeat="x in regs">{{x.Name}}</option>
+							</select>
+						</div>
+						<div class="widget recent-events">
+							<select ng-model="org" ng-init="org = 0" style="border-radius: 20px ; color: #237c77 ; width: 100%; height: 30px" ng-change="changingFun()">
+									<option disabled ng-value="0">اسم الجمعية </option>
+									<option ng-repeat="x in orgns">{{x.Name}}</option>
+							</select>
+						</div>
+-->
+						<!--<div class="widget recent-events">
+							<div class="dropdown">
+								<button class="btn Filter-btn2 text-center" type="button">أبحث </button>
+
+							</div>-->
+				    </div>
+				</div>
+				<!-- end sidebar -->
+            </div>
+				<!-- end col -->
+				<br>
+				<br>
+				<hr class="borderd-2">
+                <br>
+				<br>
+        </div>
+			<!-- end row -->
+        
+        <!-- start event-single-main-content -->
+        <section class="event-single-main-content">
+            <div class="container">
+                <div class="row section-padding about-event-wrapper" id="SearchRes">
+                    <div class="col col-lg-13">
+
+                        <div class="row" >
+
+						  <div ng-repeat = "event in Events | filter:{Title:genSearch}" >
+                            <div class="col col-md-12" style="border: 2px solid darkgrey ; border-radius: 20px; padding-top: 30px; padding-bottom: 20px">
+                                <div class="Project2 col col-md-8">
+                                    <h4 ng-bind-html = "event.Title"></h4>
+                                    <hr class="borderd-2">
+                                    <div class="content">
+										<a ng-href="https://{{event.Link}}" target="_blank" style="cursor: pointer">لينك الايفنت</a>
+
+                                        <div ng-bind-html = "event.Description"></div>
+                                    </div>
+                                </div>
+                                <div class="sidebar col col-md-4">
+                                    <div class="event-info" style="border: 1px solid darkgrey ; border-radius: 20px; padding: 1px 25px">
+                                        <ul>
+
+                                            <li>
+                                                <i class="fi flaticon-day"></i>{{event.StartDate}}</li>
+                                            <li>
+                                                <i class="fi flaticon-clock"></i> {{event.EndDate}}</li>
+                                            <li style="font-size: 13px">
+                                                <i class="fa fa-map-marker fa-lg"></i>{{event.Address}}</li>
+											
+                                        </ul>
+                                    </div>
+                                    <div style="border: 1px solid darkgrey ; border-radius: 20px">
+                                
+                                        <div class="img-holder">
+                                            <img style="height: 100%; width: 100%; border-radius: 20px" ng-src="{{event.Image}}" onerror="this.src='images/causes-list-box/img-1.jpg'">
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col col-md-2 col-md-offset-5">
+									
+                                    <a class="btn theme-btn" ng-href="#EventsDetails/{{event.ID}}">تفاصيل الحدث</a>
+                                </div>
+                                
+
+
+                            </div>
+                            
+							<br>
+							<hr class="borderd-2">
+                            <br>
+							
+						  </div>
+                          <div class="text-center" ng-if="Events.length === 0">
+                                <h1>No Events Matched </h1>
+                          </div>
+                        </div>
+                        <!-- end row -->
+                    </div>
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+
+
+        </section>
+        
+
+		<!-- end contianer -->
+	</section>
+	<!-- end causes-list-section -->
+
+
+</div>
+<!-- end of page-wrapper -->
+
+<script type="application/x-javascript">
+	addEventListener("load", function() {
+		setTimeout(hideURLbar, 0);
+	}, false);
+
+	function hideURLbar() {
+		window.scrollTo(0, 1);
+	}
+
+</script>
+
+<!--Calender-->
+<script src="js/underscore-min.js"></script>
+<script src="js/moment-2.2.1.js"></script>
+<script src="js/clndr.js"></script>
+<script src="js/site.js"></script>
+
+<!--End Calender-->
+<!-- Custom script for this template -->
+<script src="js/script.js"></script>
+
+<script>
+	function startTime() {
+		var today = new Date();
+		var h = today.getHours();
+		var m = today.getMinutes();
+		var s = today.getSeconds();
+		m = checkTime(m);
+		s = checkTime(s);
+		document.getElementById('txt').innerHTML =
+			h + ":" + m + ":" + s;
+		var t = setTimeout(startTime, 500);
+	}
+
+	function checkTime(i) {
+		if (i < 10) {
+			i = "0" + i
+		}; // add zero in front of numbers < 10
+		return i;
+	}
+	//startTime();
+	setTimeout(startTime, 1000)
+
+</script>

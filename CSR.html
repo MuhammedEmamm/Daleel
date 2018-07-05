@@ -1,0 +1,183 @@
+<!-- Start header -->
+<header id="header" class="header-style-three">
+		<div class="topbar">
+			<div class="upper-topbar">
+				<div class="container">
+					<div class="row">
+												<div class="col col-sm-8">
+							<div class="contact-info">
+								<ul>
+									<li>
+										<i class="fa fa-map-marker"></i> {{charityContact.Address}}</li>
+									<li>
+										<i class="fa fa-mobile"></i> {{charityContact.Mobile}}</li>
+									<li>
+										<i class="fa fa-envelope-o"></i> {{charityContact.Email}}</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col col-sm-2">
+							<div class="social">
+								<ul>
+									<li><a ng-href="http://{{charityContact.FacebookCount}}"><i class="fa fa-facebook"></i></a></li>
+
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!-- end upper-topbar -->
+
+			
+
+		</div>
+		<!-- end top-bar -->
+
+		<nav class="navigation navbar navbar-default" id="main-navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="open-btn">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+				</div>
+				<div class="col-xs-11">
+					<div id="navbar" class="navbar-collapse collapse col-lg-8">
+						<button class="close-navbar">
+                                <i class="fa fa-close"></i>
+                            </button>
+						<ul class="nav navbar-nav">
+							<li>
+								<a href="#">الرئيسيه</a>
+
+							</li>
+							<li>
+								<a href="#about">من نحن</a>
+
+							</li>
+							<li class="current">
+								<a href="#CSR">CSR</a>
+
+							</li>
+							<li>
+								<a href="#cases">الحالات</a>
+
+							</li>
+							<li>
+								<a href="#gallery">معرض الصور</a>
+
+							</li>
+							<li>
+								<a href="#Events">الاحداث</a>
+
+							</li>
+							<li>
+								<a href="#programs">برامجنا</a>
+
+							</li>
+							<li>
+								<a href="#info">أخبار</a>
+							</li>
+                            <li>
+								<a href="#BloodBank">بنك الدم</a>
+							</li>
+							<li>
+								<a href="#contact">تواصل معنا</a>
+							</li>	<li >
+								<a href="#SeasonalProjects">مشاريع موسمية</a>
+							</li><li >
+								<a href="#Organizations">جمعيات</a>
+							</li><li >
+								<a href="#join-us">انضم لنا</a>
+							</li>
+						</ul>
+					</div>
+					<!-- end of nav-collapse -->
+
+
+				</div>
+								<div class="col-xs-1"><img style="width: 130px ; margin-right:-50%" src="images/preloder.png"></div>
+
+			</div>
+			<!-- end of container -->
+		</nav>
+	</header>
+    <!-- start page-wrapper -->
+    <div class="page-wrapper event-single-page">
+
+
+        <!-- start page-title -->
+        <section class="page-title"  style="height: 300px">
+            <div class="page-title-bg"></div>
+            <div class="container">
+                <div class="title-box">
+                    <h1>CSR </h1>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="#">الرئيسيه</a>
+                        </li>
+
+                        <li class="active">CSR</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- end container -->
+        </section>
+        <!-- end page-title -->
+
+
+        <!-- start event-single-main-content -->
+        <section class="event-single-main-content">
+            <div class="container">
+                <div class="row section-padding about-event-wrapper">
+                    <div class="col col-lg-11">
+
+
+                        <div class="row">
+                            <div class="col col-md-12" ng-repeat="act in CSR">
+                                <div class="about-event">
+                                    <h2>{{act.Title}}</h2>
+                                    <div class="SRC">
+                                 
+                                        <div class="listing-badge now-open">
+                                            <i class="fa fa-calendar"></i>
+                                            <span>{{act.ActivityDate}}</span>
+											       <div class="para-with-img"   >
+                                            <span>
+                                                <img ng-src="{{act.companyImage}}" onerror="this.src='images/82.jpg'" alt class="img img-responsive" style="width: 225px ; height: 135px">
+                                            </span>
+                                        </div>
+
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="content Content-2">
+                                        <p ng-bind-html="act.Description"></p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+          
+
+                        </div>
+                        <!-- end row -->
+                    </div>
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+
+
+        </section>
+        
+    </div>
+    <!-- end of page-wrapper -->
+
+    <!-- Custom script for this template -->
+    <script src="js/script.js"></script>

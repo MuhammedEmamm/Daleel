@@ -1,0 +1,232 @@
+<!-- Start header -->
+<header id="header" class="header-style-three">
+		<div class="topbar">
+			<div class="upper-topbar">
+				<div class="container">
+					<div class="row">
+												<div class="col col-sm-8">
+							<div class="contact-info">
+								<ul>
+									<li>
+										<i class="fa fa-map-marker"></i> {{charityContact.Address}}</li>
+									<li>
+										<i class="fa fa-mobile"></i> {{charityContact.Mobile}}</li>
+									<li>
+										<i class="fa fa-envelope-o"></i> {{charityContact.Email}}</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col col-sm-2">
+							<div class="social">
+								<ul>
+									<li><a ng-href="http://{{charityContact.FacebookCount}}"><i class="fa fa-facebook"></i></a></li>
+
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!-- end upper-topbar -->
+
+			
+
+		</div>
+		<!-- end top-bar -->
+
+		<nav class="navigation navbar navbar-default" id="main-navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="open-btn">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+				</div>
+				<div class="col-xs-11">
+					<div id="navbar" class="navbar-collapse collapse col-lg-8">
+						<button class="close-navbar">
+                                <i class="fa fa-close"></i>
+                            </button>
+						<ul class="nav navbar-nav">
+							<li>
+								<a ng-click="topScrolling()" href="#">الرئيسيه</a>
+
+							</li>
+							<li>
+								<a href="#about">من نحن</a>
+
+							</li>
+							<li>
+								<a href="#CSR">CSR</a>
+
+							</li>
+							<li class="current">
+								<a href="#cases">الحالات</a>
+
+							</li>
+							<li>
+								<a href="#gallery">معرض الصور</a>
+
+							</li>
+							<li>
+								<a href="#Events">الاحداث</a>
+
+							</li>
+							<li>
+								<a href="#programs">برامجنا</a>
+
+							</li>
+							<li>
+								<a href="#info">أخبار</a>
+							</li>
+                            <li>
+								<a href="#BloodBank">بنك الدم</a>
+							</li>
+							<li>
+								<a href="#contact">تواصل معنا</a>
+							</li>	<li >
+								<a href="#SeasonalProjects">مشاريع موسمية</a>
+							</li><li >
+								<a href="#Organizations">جمعيات</a>
+							</li><li >
+								<a href="#join-us">انضم لنا</a>
+							</li>
+						</ul>
+					</div>
+					<!-- end of nav-collapse -->
+
+
+				</div>
+								<div class="col-xs-1"><img style="width: 130px ; margin-right:-50%" src="images/preloder.png"></div>
+
+			</div>
+			<!-- end of container -->
+		</nav>
+	</header>
+    <!-- start page-wrapper -->
+    <div class="page-wrapper causes-list-page">
+
+        <!-- start page-title -->
+        <section class="page-title"  style="height: 300px">
+            <div class="page-title-bg"></div>
+            <div class="container">
+                <div class="title-box">
+                    <h1>
+                        <span>الحالات</span>
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="index.html">الرئيسيه</a>
+                        </li>
+                        <li class="active">قائمه الحالات</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- end container -->
+        </section>
+        <!-- end page-title -->
+
+
+        <!-- start causes-list-section -->
+        <section class="causes-list-section section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-9">
+                        <div class="causes-list-box-wrapper">
+                            <div class="causes-list-box" ng-repeat="Item in Result | filter:{Name:genSearch}">
+                                <div class="img-holder">
+                                    <img ng-src="{{Item.Image}}" onerror="this.src='images/causes-list-box/img-1.jpg';"  alt class="img img-responsive">
+                                </div>
+                                <div class="details">
+                                    <h3>{{Item.Name}}</h3>
+                                    <h4><span>المنظمة:</span> {{Item.Organization}}</h4>
+                                    <h4><span> تاريخ الحدث:</span> {{Item.DueDate}}</h4>
+                                    <h4><span>المكان:</span> {{Item.City}}, {{Item.Governorate}}</h4>
+                                    <h4><span>الحالة:</span> {{Item.CaseType}}</h4>
+                                    <h4><span>كود الحالة:</span> {{Item.CaseCode}}</h4>
+                                    <a class="btn theme-btn" ng-href="#case-details/{{Item.ID}}">المزيد عن الحاله</a>
+                                    <!--<a ng-click="getCausesId(Item.ID)" class="btn theme-btn" ng-href="#case-details/{{Item.ID}}">المزيد عن الحاله</a>
+                                    <a href="causes-single.html" class="btn theme-btn">المزيد عن الحاله</a>-->
+                                </div>
+                            </div>
+                            <div class="text-center" ng-if="Result.length === 0">
+                                <h1>لا توجد حالات  </h1>
+                            </div>
+                        </div>
+                        <!-- end causes-list-box-wrapper -->
+                    </div>
+                    <!-- end col -->
+                    <div class="col col-md-3 sidebar-wrapper">
+					<div class="sidebar">
+						<div class="widget search-widget">
+                                <div>
+									<input type="text" class="form-control" placeholder="أبحث.." ng-model="casesearch" style="border-radius: 20px ;color: #237c77 ; width: 100%; height: 30px ;">
+
+								</div>
+
+
+								<div class="form-group">
+									<label>محافظة الحالة </label>
+									<select ng-model="gov" style="border-radius: 20px ;color: #237c77 ; width: 100%; height: 30px ;" ng-options="x.ID as x.Name for x in govs" ng-change="getregs(gov)">
+
+											<!--<option selected value=""></option>
+											<option ng-repeat="x in regs">{{x.Name}}</option>-->
+									</select>
+								</div>
+
+								<div class="form-group">
+									<label>منطقة الحالة </label>
+									<select ng-model="reg" style="border-radius: 20px ;color: #237c77 ; width: 100%; height: 30px;" ng-options="x.ID as x.Name for x in regs" >
+											&nbsp;&nbsp;&nbsp;
+											<!--<option selected value=""></option>
+											<option ng-repeat="x in regs">{{x.Name}}</option>-->
+									</select>
+								</div>
+								<h6 ng-if="submitted && reg==undefined && gov!=undefined" style="color: red">من فضلك ,قم بأختيار منطقة</h6>
+
+								<div class="form-group">
+										<label>نوع الحالة </label>
+										<select ng-model="case" style="border-radius: 20px ; color: #237c77 ; width: 100%; height: 30px" ng-options="x.Name as x.Name for x in category" >
+											<!--<option selected value=""></option>
+											<option ng-repeat="x in category">{{x.Name}}</option>-->
+										</select>
+
+								</div>
+
+								<div class="form-group">
+															<label>اسم الجمعية </label>
+
+									<select ng-model="org" style="border-radius: 20px ; color: #237c77 ; width: 100%; height: 30px" ng-options="x.Name as x.Name for x in orgns" >
+											<!--<option selected value=""></option>-->
+
+									</select>
+								</div>
+								<button type="button" class="btn" ng-click="casesChanges()" >
+                                    <i class="fa fa-search"></i>&nbsp;ابحث
+                                        </button>
+                           							
+						</div>                        
+					</div>
+					<!-- end sidebar -->
+				</div>
+                    
+                    <!-- end col -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end contianer -->
+        </section>
+        <!-- end causes-list-section -->
+
+
+       
+
+    </div>
+    <!-- end of page-wrapper -->
+
+    <!-- Custom script for this template -->
+    <script src="js/script.js"></script>

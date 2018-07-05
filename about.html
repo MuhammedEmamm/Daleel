@@ -1,0 +1,304 @@
+<!-- Start header -->
+<header id="header" class="header-style-three">
+		<div class="topbar">
+			<div class="upper-topbar">
+				<div class="container">
+					<div class="row">
+						<div class="col col-sm-8">
+							<div class="contact-info">
+								<ul>
+									<li>
+										<i class="fa fa-map-marker"></i> {{charityContact.Address}}</li>
+									<li>
+										<i class="fa fa-mobile"></i> {{charityContact.Mobile}}</li>
+									<li>
+										<i class="fa fa-envelope-o"></i> {{charityContact.Email}}</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col col-sm-2">
+							<div class="social">
+								<ul>
+									<li><a ng-href="http://{{charityContact.FacebookCount}}"><i class="fa fa-facebook"></i></a></li>
+
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!-- end upper-topbar -->
+
+			
+
+		</div>
+		<!-- end top-bar -->
+
+		<nav class="navigation navbar navbar-default" id="main-navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="open-btn">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+				</div>
+				<div class="col-xs-11">
+					<div id="navbar" class="navbar-collapse collapse col-lg-8">
+						<button class="close-navbar">
+                                <i class="fa fa-close"></i>
+                            </button>
+						<ul class="nav navbar-nav">
+							<li>
+								<a href="#">الرئيسيه</a>
+
+							</li>
+							<li class="current">
+								<a href="#about">من نحن</a>
+
+							</li>
+							<li>
+								<a href="#CSR">CSR</a>
+
+							</li>
+							<li>
+								<a href="#cases">الحالات</a>
+
+							</li>
+							<li>
+								<a href="#gallery">معرض الصور</a>
+
+							</li>
+							<li>
+								<a href="#Events">الاحداث</a>
+
+							</li>
+							<li>
+								<a href="#programs">برامجنا</a>
+
+							</li>
+							<li>
+								<a href="#info">أخبار</a>
+							</li>
+                            <li>
+								<a href="#BloodBank">بنك الدم</a>
+							</li>
+							<li>
+								<a href="#contact">تواصل معنا</a>
+							</li>	<li >
+								<a href="#SeasonalProjects">مشاريع موسمية</a>
+							</li><li >
+								<a href="#Organizations">جمعيات</a>
+							</li><li >
+								<a href="#join-us">انضم لنا</a>
+							</li>
+						</ul>
+					</div>
+					<!-- end of nav-collapse -->
+
+
+				</div>
+								<div class="col-xs-1"><img style="width: 130px ; margin-right:-50%" src="images/preloder.png"></div>
+
+			</div>
+			<!-- end of container -->
+		</nav>
+	</header>
+
+    <!-- start page-wrapper -->
+    <div class="page-wrapper about-page">
+
+        <!-- start page-title -->    
+        <section class="page-title"  style="height: 300px">
+            <div class="page-title-bg"></div>
+            <div class="container">
+                <div class="title-box">
+                    <h1>من نحن</h1>
+                    <ol class="breadcrumb">
+                        <li><a href="index.html">الرئيسيه</a></li>
+                        <li class="active">من نحن</li>
+                    </ol>
+                </div>
+            </div> <!-- end container -->
+        </section>
+        <!-- end page-title -->
+
+
+        <!-- start about-details -->
+        <section class="about-us-st section-padding">
+            <div class="container">
+                <h2><span>عن</span> كلنا دليل الخير</h2>
+                <div class="row">
+                    <div class="col col-md-6">
+                        <div class="left-col">
+                            <div class="company">
+                                <h3><span>كلنا دليل الخير</span></h3>
+                                <span>جعل العالم مكانا أفضل</span>
+                            </div>
+                            <p></p>
+
+                            <div class="panel-group" id="accordion">
+                                <div class="panel panel-default current">
+                                    <div class="panel-heading" id="headingOne">
+                                        <a data-toggle="collapse" data-parent="#accordion" data-target="#collapseOne" aria-expanded="true" style="cursor: pointer">الرساله<i class="fa fa-angle-down"></i></a>
+                                    </div>
+                                    <div id="collapseOne" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            <div class="details">
+                                                <p ng-bind-html="aboutResult.Message"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" id="headingTwo">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#collapseTwo" style="cursor: pointer">الرؤيه<i class="fa fa-angle-down"></i></a>
+                                    </div>
+                                    <div id="collapseTwo" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <div class="img-holder">
+                                                <img src="images/about/thumb/img-1.jpg" alt>
+                                            </div>
+                                            <div class="details">
+                                                <p ng-bind-html="aboutResult.Vision"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" id="headingThree">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#collapseThree" style="cursor: pointer"> أهدافنا <i class="fa fa-angle-down"></i></a>
+                                    </div>
+                                    <div id="collapseThree" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <div class="img-holder">
+                                                <img src="images/about/thumb/img-1.jpg" alt>
+                                            </div>
+                                            <div class="details">
+                                                <p ng-bind-html="aboutResult.Beif"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- end left-col -->
+                    </div> <!-- end col -->
+
+                    <div class="col col-md-6 wow fadeInRightSlow">
+                        <div class="right-col">
+                            <div class="video">
+                                <img src="images/about/video-poster.jpg" alt="" class="img img-responsive">
+                                <a href="https://www.youtube.com/embed/MJkfD1l55TA"  class="video-btn" data-type="iframe"><i class="fa fa-play"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </section>
+        <!-- end about-details -->
+
+
+        <!-- start cta-4 --> 
+        <section class="cta-4 section-padding">
+            <h2 class="hidden">CTA 4</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col col-sm-4">
+                        <div class="wow fadeInLeftSlow">
+                            <span class="icon"><i class="fi flaticon-money-1"></i></span>
+                            <h3>تبرع المال</h3>
+                            <p>التبرُّعات طاعة لله، وتكافل الصدقة له أثرٌ كبير في القضاء على مشكلة الفقر، وقد رغَّب الإسلامُ في تقديم العون للمحتاجين بسبب الفقرِ أو غيره بيننا أناس ليس لهم من يعيلهم أو يكادون لا يجدون ما يسد رمقهم لا يعلم حالهم إلا الله جل في علاه..</p>
+                            
+                        </div>
+                    </div>
+                    <div class="col col-sm-4">
+                        <div class="wow fadeInLeftSlow" data-wow-delay="0.3s"> 
+                            <span class="icon"><i class="fi flaticon-heart"></i></span>
+                            <h3>تصبح متطوعا</h3>
+                            <p>العمل التطوعي من الأعمال التي حث عليها الإسلام ودعا إليها النبي عليه الصلاة والسلام، فالعمل التطوعي ظاهرة اجتماعية تحقق الترابط والتاَلف والتآخي بين أفراد المجتمع حتى يكون كما وصفه الرسول صلى الله عليه وسلم بقوله: (مثل المؤمنين في توادهم وتعاطفهم وتراحمهم كالجسد الواحد إذا اشتكى منه عضو تداعى له سائر الجسد كالحمى والسهر) رواه مسلم</p>
+                            
+                        </div>
+                    </div>
+                    <div class="col col-sm-4">
+                        <div class="wow fadeInLeftSlow" data-wow-delay="0.6s">
+                            <span class="icon"><i class="fi flaticon-business-1"></i></span>
+                            <h3>رعاية</h3>
+                            <p>متعة العطاء في بسمة طفل، ودعوة إمرأة وشكر شيخ، لا يراها الكثيرون إلا ممن حملوا شعلة الواجب الإنساني والإجتماعي لينيروا دروبا أطفأها اليتم والعوز والحاجة. نجتهد في مساعدة الفئات الأكثر حاجة وصولا للتكامل الإجتماعي والمدني ومنها إلى التنمية العامة والمتنوعة</p>
+                            
+                        </div>
+                    </div>
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </section>
+        <!-- end cta-4 -->
+
+
+        <!-- start cta-2 -->
+        <section class="cta-2">
+            <div class="container-fluid">
+                <div class="row" >
+                    <div class="col col-md-6">
+                        <img  src="images/join-us-bg.jpg" style="height: 300px">
+                    </div>
+
+                    <div class="col col-md-5  sing-up " style="height: 300px">
+                        <h3>
+                            <span>
+                                <img src="images/sing-up-icon.png" alt>
+                            </span> الاشتراك في برنامج المتطوعين</h3>
+                        <span>خدمة الإنسانية</span>
+                        <p>يمكنك الان الاشتراك معنا ....</p>
+                        <a href="#join-us" class="btn theme-btn">سجل</a>
+                    </div>
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+        </section>
+        <!-- end cta-2 -->
+
+
+        <!-- start volunteers -->
+        <section class="volunteers section-padding">
+            <div class="container">
+                <div class="row section-title">
+                    <div class="col col-xs-12">
+                        <span>فريقنا</span>
+                        <h2>مجلس الادارة</h2>
+                    </div>
+                </div> <!-- end section-title -->
+
+                <div class="row volunteers-grid">
+                    <div class="col col-md-3 col-xs-6" ng-repeat="member in board">
+                        <div class="box">
+                            <div class="img-holder">
+                                <img ng-src="{{member.Image}}" alt class="img img-responsive">
+                            </div>
+                            <div class="hover-text">
+                                <div>
+                                    <h4>{{member.Name}}</h4>
+                                    <span>{{member.Title}}</span>
+                                    <!--<ul class="social-links">
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    </ul>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </section>
+        <!-- end volunteers -->
+    </div>
+    <!-- end of page-wrapper -->
+    <!-- Custom script for this template -->
+    <script src="js/script.js"></script>

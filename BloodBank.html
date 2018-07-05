@@ -1,0 +1,213 @@
+
+<body>
+    <!-- Start header -->
+<header id="header" class="header-style-three">
+		<div class="topbar">
+			<div class="upper-topbar">
+				<div class="container">
+					<div class="row">
+												<div class="col col-sm-8">
+							<div class="contact-info">
+								<ul>
+									<li>
+										<i class="fa fa-map-marker"></i> {{charityContact.Address}}</li>
+									<li>
+										<i class="fa fa-mobile"></i> {{charityContact.Mobile}}</li>
+									<li>
+										<i class="fa fa-envelope-o"></i> {{charityContact.Email}}</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col col-sm-2">
+							<div class="social">
+								<ul>
+									<li><a ng-href="http://{{charityContact.FacebookCount}}"><i class="fa fa-facebook"></i></a></li>
+
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!-- end upper-topbar -->
+
+			
+
+		</div>
+		<!-- end top-bar -->
+
+		<nav class="navigation navbar navbar-default" id="main-navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="open-btn">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+				</div>
+				<div class="col-xs-11">
+					<div id="navbar" class="navbar-collapse collapse col-lg-8">
+						<button class="close-navbar">
+                                <i class="fa fa-close"></i>
+                            </button>
+						<ul class="nav navbar-nav">
+							<li>
+								<a href="#">الرئيسيه</a>
+
+							</li>
+							<li>
+								<a href="#about">من نحن</a>
+
+							</li>
+							<li>
+								<a href="#CSR">CSR</a>
+
+							</li>
+							<li>
+								<a href="#cases">الحالات</a>
+
+							</li>
+							<li>
+								<a href="#gallery">معرض الصور</a>
+
+							</li>
+							<li>
+								<a href="#Events">الاحداث</a>
+
+							</li>
+							<li>
+								<a href="#programs">برامجنا</a>
+
+							</li>
+							<li>
+								<a href="#info">أخبار</a>
+							</li>
+                            <li class="current">
+								<a href="#BloodBank">بنك الدم</a>
+							</li>
+							<li>
+								<a href="#contact">تواصل معنا</a>
+							</li>	<li >
+								<a href="#SeasonalProjects">مشاريع موسمية</a>
+							</li><li >
+								<a href="#Organizations">جمعيات</a>
+							</li><li >
+								<a href="#join-us">انضم لنا</a>
+							</li>
+						</ul>
+					</div>
+					<!-- end of nav-collapse -->
+
+
+				</div>
+								<div class="col-xs-1"><img style="width: 130px ; margin-right:-50%" src="images/preloder.png"></div>
+
+			</div>
+			<!-- end of container -->
+		</nav>
+	</header>
+    <!-- start page-wrapper -->
+    <div class="page-wrapper about-page">
+
+        <!-- start page-title -->
+        <section class="page-title"  style="height: 300px">
+            <div class="page-title-bg"></div>
+            <div class="container">
+                <div class="title-box">
+                    <h1>بنك الدم</h1>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="#">الرئيسيه</a>
+                        </li>
+                        <li class="active">بنك الدم</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- end container -->
+        </section>
+        <!-- end page-title -->
+
+
+        <!-- start cta-4 -->
+        <section class="cta-4 section-padding bloodBanks">
+            <h2>بنوك الدم</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3" ng-repeat="x in bloodbanks">
+                        <div class="IconImag">
+                            <img src="images/transfusion-(1).png">
+                        </div>
+                        <div class="Description">
+                            <h5>{{x.Name}}</h5>
+                            <p>
+                                <i class="fa fa-map-marker"></i>{{x.Governorate}}-{{x.City}}</p>
+                            <p>{{x.Title}}</p>
+                            <a data-toggle="modal" data-target="#myModal" ng-click="getbd(x.ID)" style="cursor: pointer">المزيد</a>
+                        </div>
+                    </div>
+                    
+                    <hr class="borderd">
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+        </section>
+        <!-- end cta-4 -->
+
+
+<!-- bloodbanks-Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <!--  -->
+                <div id="qr">
+                    <img src="images/transfusion-(1).png">
+                </div>
+                <div class="text-Img">
+                    <h4>{{bdetail.Name}}</h4>
+                    <p>
+                        <i class="fa fa-map-marker"></i>{{bdetail.Governorate}}-{{bdetail.City}}</p>
+                    <p>{{bdetail.Title}}</p>
+
+                </div>
+                <p ng-bind-html="bdetail.Description"></p>
+                <hr class="borderd-2">
+                <div class="Contacts">
+                    <h4>جهات الاتصال</h4>
+					<hr class="borderd-2">
+					<div class="row">
+						<div class="col col-md-3" ng-repeat="x in bdetail.BloodBankContacts">
+						<div class="Description">
+							<h5><i class="fa fa-user fa-lg"></i>&nbsp;{{x.ContactName}}</h5>
+                            <h6><i class="fa fa-phone fa-lg"></i>&nbsp;{{x.ContactNumber}}</h6>
+                        </div>
+					</div>
+					
+					
+					</div>
+                    
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">غلق</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+    </div>
+    <!-- end of page-wrapper -->
+
+    <!-- Custom script for this template -->
+    <script src="js/script.js"></script>

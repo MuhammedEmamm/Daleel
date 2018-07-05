@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Daleel el-Kheir website">
+    <meta name="author" content="Alia hosny">
+
+    <!-- Page Title -->
+    <title>Daleel El khair</title>
+
+
+    <!-- Icon fonts -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/flaticon.css" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.rtl.min.css" rel="stylesheet">
+
+    <!-- Plugins for this template -->
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+    <link href="css/owl.transitions.css" rel="stylesheet">
+    <link href="css/jquery.fancybox.css" rel="stylesheet">
+     <link href="css/magnific-popup.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- start page-wrapper -->
+    <div class="page-wrapper volunteer-single">
+
+        <!-- start preloader --> 
+        <div class="preloader">
+                <div class="middle">
+                    <img src="images/preloder.png">
+                </div>
+            </div>
+            <!-- end preloader -->     
+
+        <!-- Start header -->
+        <header id="header" class="header-style-three">
+            <div class="topbar"> 
+                <div class="upper-topbar">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col col-sm-9">
+                                <div class="contact-info">
+                                    <ul>
+									<li>
+										<i class="fa fa-map-marker"></i> {{charityContact.Address}}</li>
+									<li>
+										<i class="fa fa-mobile"></i> {{charityContact.Mobile}}</li>
+									<li>
+										<i class="fa fa-envelope-o"></i> {{charityContact.Email}}</li>
+								</ul>
+                                </div>
+                            </div>
+
+                            <div class="col col-sm-3">
+                                <div class="social">
+                                    <ul>
+                                        <li><a ng-href="http://{{charityContact.FacebookCount}}"><i class="fa fa-facebook"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end upper-topbar -->
+
+                <div class="lower-topbar">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col col-md-4">
+                                <div class="logo">
+                                    <a href="index.html"><img src="images/logo-2.png" alt class="img img-responsive"></a>
+                                </div>
+                            </div>
+                            <div class="col col-md-8">
+                                <div class="next-event">
+                                    <div class="subject">
+                                        <img src="images/cycling.png" alt>
+                                        <h5>الأحداث القادمة <span>2018</span></h5>
+                                    </div>
+                                    <div id="clock"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end lower-topbar -->
+
+            </div> <!-- end top-bar -->
+
+            <nav class="navigation navbar navbar-default" id="main-navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="open-btn">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="col-xs-12">
+                        <div id="navbar" class="navbar-collapse collapse col-lg-8">
+                        <button class="close-navbar"><i class="fa fa-close"></i></button>
+                        <ul class="nav navbar-nav">
+                            <li class="current" >
+                                <a href="#">الرئيسيه</a>
+                                
+                            </li>
+                            <li >
+                                <a href="#">من نحن</a>
+                                
+                            </li>
+                            <li >
+                                <a href="#">CSR</a>
+                                
+                            </li>
+                            <li >
+                                <a href="#">الحالات</a>
+                                
+                            </li>
+                            <li >
+                                <a href="#">الاستديو</a>
+                               
+                            </li>
+                            <li >
+                                <a href="#">الاجداث</a>
+                               
+                            </li>
+                            <li >
+                                <a href="#">برامجنا</a>
+                               
+                            </li>
+                            <li><a href="contact.html">تواصل معنا</a></li>	<li >
+								<a href="#SeasonalProjects">مشاريع موسمية</a>
+							</li><li >
+								<a href="#Organizations">جمعيات</a>
+							</li>
+                        </ul>
+                    </div><!-- end of nav-collapse -->
+
+                   
+                    </div>
+                </div><!-- end of container -->
+            </nav>
+        </header>
+        <!-- end of header -->
+
+
+        <!-- start page-title -->    
+        <section class="page-title">
+            <div class="page-title-bg"></div>
+            <div class="container">
+                <h2 class="hidden">Volunteer page</h2>
+            </div> <!-- end container -->
+        </section>
+        <!-- end page-title -->
+
+
+        <!-- start volunteer-single-section -->  
+        <section class="volunteer-single-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <div class="volunteer-profile-title">
+                            <div class="img-holder">
+                                <img src="images/volunteer-single/volunteers/img-1.jpg" alt class="img img-responsive">
+                            </div>
+                            <div>
+                                <h3>أسم المتبرع</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row volunteer-content">
+                    <div class="col col-md-4">
+                        <div class="info">
+                            <div class="box-title">
+                                <h3><i class="fa fa-pencil"></i> معلومات </h3>
+                            </div>
+                            <ul class="info-details">
+                                <li>
+                                    <span>المدينه</span>
+                                    <span>القاهره</span>
+                                </li>
+                                <li>
+                                    <span>الحاله</span>
+                                    <span>انثي</span>
+                                </li>
+                                
+                                <li>
+                                    <span>إسهام</span>
+                                    <span>10 حالات, 7 اجداث</span>
+                                </li>
+                            </ul>
+                            
+                            <div class="social">
+                                <span>بيانات</span>
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col col-md-8">
+                        <div class="bio">
+                            <div class="box-title">
+                                <h3><i class="fa fa-pencil"></i> نبذه عن </h3>
+                            </div>
+                            <p>نيك بورو كيسكام إست، كوي دولورم إيبسوم كويا دولور سيت أميت، كون سيكتيتور، أديبيسشي فيليت، سيد كويا نون نومكوم إيوس مودي تيمبورا إنسي دونت أوت لابور إت دولور ماغنام أليكام كويرات فولوبتاتم.</p>
+                            <p>أوت إنيم مينيما فينيام، كويس نوستروم إكسيرسيساتيونيم أولام كوربوراتيون سوسسيبيت لابوروسام، نيسي أوت أليكسيد إكس إيا كومودي.</p>
+                        </div>
+                        <div class="similar-profile">
+                            <div class="box-title">
+                                <h3><i class="fa fa-pencil"></i> ملفات شخصية مماثلة</h3>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/volunteer-single/similar-profiles/img-1.jpg" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/volunteer-single/similar-profiles/img-2.jpg" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/volunteer-single/similar-profiles/img-3.jpg" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/volunteer-single/similar-profiles/img-4.jpg" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/volunteer-single/similar-profiles/img-5.jpg" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/volunteer-single/similar-profiles/img-6.jpg" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/volunteer-single/similar-profiles/img-7.jpg" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+        <!-- end volunteer-single-section -->
+
+
+         <!-- start newsletter -->    
+        <section class="newsletter">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col col-md-5 children-holder"></div>
+                    <div class="col col-md-7 subscribe">
+                        <h3>شارك معنا</h3>
+                        <p>لاجل  <span>أخبارنا</span>التحديثات والترويجية</p>
+
+                        <form action="#">
+                            <div>
+                                <input class="form-control" type="email" required placeholder="email address">
+                                <button type="submit" class="btn theme-btn">شارك</button>
+                            </div>
+                        </form>
+                        <div class="pluses">
+                            <i class="fa fa-plus"></i>
+                            <i class="fa fa-plus"></i>
+                        </div>
+                    </div>
+                </div> <!-- end row -->
+            </div> <!-- end container-fluid -->
+        </section>
+        <!-- end newsletter -->
+  <!-- start partner -->
+        <section class="partner">
+            <h2 class="hidden">Partner</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <div class="partner-slider">
+                            <div class="box">
+                                <img src="images/partner/img-1.png" alt class="img img-responsive">
+                            </div>
+                            <div class="box">
+                                <img src="images/partner/img-2.png" alt class="img img-responsive">
+                            </div>
+                            <div class="box">
+                                <img src="images/partner/img-3.png" alt class="img img-responsive">
+                            </div>
+                            <div class="box">
+                                <img src="images/partner/img-4.png" alt class="img img-responsive">
+                            </div>
+                            <div class="box">
+                                <img src="images/partner/img-1.png" alt class="img img-responsive">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+        <!-- end partner -->
+
+        <!-- start footer -->  
+        <footer>
+            <div class="container">
+                <div class="row upper-footer">
+                    <div class="col col-md-5 col-xs-6">
+                        <div class="widget about-widget">
+                            <div class="logo">
+                                <img src="images/logo.png" alt class="img img-responsive">
+                            </div>
+
+                            <div class="details">
+                                <p>بريسنتيوم فولوبتاتوم ديلينيتي أتك كوروبتي كوس دولوريس إت كواس مولستياس إكسباتوري سينت.</p>
+                                
+                                <ul class="social-links">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col col-md-2 col-xs-6">
+                        <div class="widget">
+                            <h3>روابط سريعة</h3>
+                            <ul>
+                                <li><a href="#">من نحن</a></li>
+                                <li><a href="#">جالتنا</a></li>
+                                <li><a href="#">برامجنا</a></li>
+                                <li><a href="#">الاستديو</a></li>
+                                <li><a href="#">الاحداث</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col col-md-2 col-xs-6">
+                        <div class="widget">
+                            <h3>مساعده</h3>
+                            <ul>
+                                <li><a href="#">الاسئله الشائعه</a></li>
+                                <li><a href="#">سياسه الخصوصيه</a></li>
+                                <li><a href="#">الدعم</a></li>
+                                <li><a href="#">تواصل معنا</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col col-md-3 col-xs-6">
+                        <div class="widget contact-widget">
+                            <h3>فيس بوك</h3>
+                            <div>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end upper-footer -->
+            </div> <!-- end container -->
+
+            <div class="row lower-footer">
+                <div class="col col-xs-12">
+                    <p class="copyright">
+                                    2018 &copy; جميع الحقوق محفوظة <span><a href="#">Yackeen solutions</a></span>
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <!-- end footer -->
+    </div>
+    <!-- end of page-wrapper -->
+
+
+    <!-- All JavaScript files
+    ================================================== -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugins for this template -->
+    <script src="js/jquery-plugin-collection.js"></script>
+
+    <!-- Custom script for this template -->
+    <script src="js/script.js"></script>
+</body>
+
+
+</html>

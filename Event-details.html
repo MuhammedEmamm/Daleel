@@ -1,0 +1,220 @@
+<!-- Start header -->
+<header id="header" class="header-style-three">
+		<div class="topbar">
+			<div class="upper-topbar">
+				<div class="container">
+					<div class="row">
+												<div class="col col-sm-8">
+							<div class="contact-info">
+								<ul>
+									<li>
+										<i class="fa fa-map-marker"></i> {{charityContact.Address}}</li>
+									<li>
+										<i class="fa fa-mobile"></i> {{charityContact.Mobile}}</li>
+									<li>
+										<i class="fa fa-envelope-o"></i> {{charityContact.Email}}</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col col-sm-2">
+							<div class="social">
+								<ul>
+									<li><a ng-href="http://{{charityContact.FacebookCount}}"><i class="fa fa-facebook"></i></a></li>
+
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!-- end upper-topbar -->
+
+			
+
+		</div>
+		<!-- end top-bar -->
+
+		<nav class="navigation navbar navbar-default" id="main-navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="open-btn">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+				</div>
+				<div class="col-xs-11">
+					<div id="navbar" class="navbar-collapse collapse col-lg-8">
+						<button class="close-navbar">
+                                <i class="fa fa-close"></i>
+                            </button>
+						<ul class="nav navbar-nav">
+							<li>
+								<a href="#">الرئيسيه</a>
+
+							</li>
+							<li>
+								<a href="#about">من نحن</a>
+
+							</li>
+							<li>
+								<a href="#CSR">CSR</a>
+
+							</li>
+							<li>
+								<a href="#cases">الحالات</a>
+
+							</li>
+							<li>
+								<a href="#gallery">معرض الصور</a>
+
+							</li>
+							<li class="current">
+								<a href="#Events">الاحداث</a>
+
+							</li>
+							<li>
+								<a href="#programs">برامجنا</a>
+
+							</li>
+							<li>
+								<a href="#info">أخبار</a>
+							</li>
+                            <li>
+								<a href="#BloodBank">بنك الدم</a>
+							</li>
+							<li>
+								<a href="#contact">تواصل معنا</a>
+							</li>	<li >
+								<a href="#SeasonalProjects">مشاريع موسمية</a>
+							</li><li >
+								<a href="#Organizations">جمعيات</a>
+							</li><li >
+								<a href="#join-us">انضم لنا</a>
+							</li>
+						</ul>
+					</div>
+					<!-- end of nav-collapse -->
+
+
+				</div>
+								<div class="col-xs-1"><img style="width: 130px ; margin-right:-50%" src="images/preloder.png"></div>
+
+			</div>
+			<!-- end of container -->
+		</nav>
+	</header>  <!-- start page-wrapper -->
+    <div class="page-wrapper event-single-page">
+
+        <!-- start page-title -->
+        <section class="page-title">
+            <div class="page-title-bg"></div>
+            <div class="container">
+                <div class="title-box">
+                    <h1>تفاصيل الحدث</h1>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="#">الرئيسيه</a>
+                        </li>
+                        <li>
+                            <a href="#Event">الاحداث</a>
+                        </li>
+                        <li class="active">التفاصيل</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- end container -->
+        </section>
+        <!-- end page-title -->
+
+
+        <!-- start event-single-main-content -->
+        <section class="event-single-main-content">
+            <div class="container">
+                <div class="row section-padding about-event-wrapper">
+                    <div class="col col-lg-12">
+                        <div class="big-photo">
+                            <img src="images/event-single/big-photo.jpg" alt class="img img-responsive">
+                        </div>
+
+                        <div class="row">
+                            <div class="col col-md-4">
+                                <div class="sidebar">
+                                    <div class="event-info" style="padding-left: 30px">
+                                        <ul>
+                                            <li>
+                                                <i class="fi flaticon-valentines-day-on-the-calendar"></i> {{EventsDetails.Category}}</li>
+                                            <li>
+                                                <i class="fi flaticon-facebook-placeholder-for-locate-places-on-maps"></i> {{EventsDetails.Region}} , {{EventsDetails.Governorate}}</li>
+                                            <li>
+                                                <i class="fi flaticon-day"></i>من {{EventsDetails.StartDate}}</li>
+                                            <li>
+                                                <i class="fi flaticon-day"></i>الي {{EventsDetails.EndDate}}</li>
+                                            <li>
+                                                <i class="fi flaticon-facebook-placeholder-for-locate-places-on-maps"></i>العنوان: {{EventsDetails.Address}}</li>
+                                            <li>
+                                                <i class="fi flaticon-profile"></i> {{EventsDetails.Organization}}</li>
+                                        </ul>
+                                    </div>
+
+<!--
+                                    <div class="event-map">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.7860910142053!2d89.55977221470843!3d22.810388785060898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ff901d843098eb%3A0x202d5a0ce395b001!2sHotel+Royal+International!5e0!3m2!1sbn!2sbd!4v1485244029135"></iframe>
+                                    </div>
+-->
+                                </div>
+                            </div>
+
+                            <div class="col col-md-8">
+                                <div class="about-event" >
+                                    <h2 style="color: #237c77">{{EventsDetails.Title}}</h2>
+                                    
+                                    <hr><hr><hr>
+                                    
+                                    <div class="row">
+                                        <div class="content">
+                                        
+                                        
+<!--                                        <p ng-bind-html="EventsDetails.Description"> </p>-->
+                                            <div class="col col-md-8">
+                                                <p ng-bind-html="EventsDetails.Description"> </p>
+                                            </div>
+                                            <div class="col col-md-4">
+                                                <img  ng-src="{{EventsDetails.Image}}" onerror="this.src = $(this).attr('images/causes-list-box/img-1.jpg')" style="width: 200px; height: 200px; border-radius: 30px" alt >
+                                            </div>
+<!--
+                                            <span class="col col-md-4">
+                                                <img class="picsSize" ng-src="{{EventsDetails.Image}}" alt class="img img-responsive">
+                                            </span>
+-->
+                                            <br>
+<!--                                            <p ng-bind-html="EventsDetails.Description"></p>-->
+                                        
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+<!--
+                                <div class="other-events">
+                                    <a href="" class="btn">التالي <i class="fa fa-angle-right"></i> </a>
+                                    <a href="" class="btn"> <i class="fa fa-angle-left"></i> السابق</a>
+                                </div>
+-->
+                            </div>
+                        </div>
+                        <!-- end row -->
+                    </div>
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+
+
+        </section>
+
+    <!-- Custom script for this template -->
+    <script src="js/script.js"></script>

@@ -1,0 +1,264 @@
+<!-- Start header -->
+<header id="header" class="header-style-three">
+		<div class="topbar">
+			<div class="upper-topbar">
+				<div class="container">
+					<div class="row">
+												<div class="col col-sm-8">
+							<div class="contact-info">
+								<ul>
+									<li>
+										<i class="fa fa-map-marker"></i> {{charityContact.Address}}</li>
+									<li>
+										<i class="fa fa-mobile"></i> {{charityContact.Mobile}}</li>
+									<li>
+										<i class="fa fa-envelope-o"></i> {{charityContact.Email}}</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col col-sm-2">
+							<div class="social">
+								<ul>
+									<li><a ng-href="http://{{charityContact.FacebookCount}}"><i class="fa fa-facebook"></i></a></li>
+
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!-- end upper-topbar -->
+
+			
+
+		</div>
+		<!-- end top-bar -->
+
+		<nav class="navigation navbar navbar-default" id="main-navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="open-btn">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+				</div>
+				<div class="col-xs-11">
+					<div id="navbar" class="navbar-collapse collapse col-lg-8">
+						<button class="close-navbar">
+                                <i class="fa fa-close"></i>
+                            </button>
+						<ul class="nav navbar-nav">
+							<li>
+								<a href="#">الرئيسيه</a>
+
+							</li>
+							<li>
+								<a href="#about">من نحن</a>
+
+							</li>
+							<li>
+								<a href="#CSR">CSR</a>
+
+							</li>
+							<li class="current">
+								<a href="#cases">الحالات</a>
+
+							</li>
+							<li>
+								<a href="#gallery">معرض الصور</a>
+
+							</li>
+							<li>
+								<a href="#Events">الاحداث</a>
+
+							</li>
+							<li>
+								<a href="#programs">برامجنا</a>
+
+							</li>
+							<li>
+								<a href="#info">أخبار</a>
+							</li>
+                            <li>
+								<a href="#BloodBank">بنك الدم</a>
+							</li>
+							<li>
+								<a href="#contact">تواصل معنا</a>
+							</li>	<li >
+								<a href="#SeasonalProjects">مشاريع موسمية</a>
+							</li><li >
+								<a href="#Organizations">جمعيات</a>
+							</li><li >
+								<a href="#join-us">انضم لنا</a>
+							</li>
+						</ul>
+					</div>
+					<!-- end of nav-collapse -->
+
+
+				</div>
+								<div class="col-xs-1"><img style="width: 130px ; margin-right:-50%" src="images/preloder.png"></div>
+
+			</div>
+			<!-- end of container -->
+		</nav>
+	</header>
+
+    <!-- start page-wrapper -->
+    <div class="page-wrapper causes-single-page">
+
+        <!-- start page-title -->
+        <section class="page-title"  style="height: 300px">
+            <div class="page-title-bg"></div>
+            <div class="container">
+                <div class="title-box">
+                    <h1>
+                        <span>تفاصيل</span> الحاله</h1>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="#">الرئيسيه</a>
+                        </li>
+                        <li class="active">تفاصيل</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- end container -->
+        </section>
+        <!-- end page-title -->
+
+
+        <!-- start causes-single-wrapper -->
+        <section class="causes-single-wrapper section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-7">
+                        <div class="causes-single">
+                            <div class="causes-list-box">
+                                <div class="title">
+                                    <h3 ng-bind-html="CausesDetails.Name"></h3>
+                                    <h4>جمعيه:
+                                        <span>{{CausesDetails.Organization}}</span></h4>
+                                    <h4>المطلوب:
+                                        <span>{{CausesDetails.RequiredAmount}}</span></h4>
+                                    <h4>القيمه الحاليه:
+                                        <span>{{CausesDetails.CurrentAmount}}</span></h4>
+                                    <h4>نوع الحاله:
+                                        <span>{{CausesDetails.Category}}</span></h4>
+                                    <a href="#" class="btn theme-btn">+ أنضم للحاله</a>
+                                </div>
+                                <div class="inner-details">
+                                    <p ng-bind-html="CausesDetails.Description"></p>
+        
+                                    <ul>
+                                        <li>
+                                            <h4><i class="fa fa-check"></i>حاله {{CausesDetails.CaseType}}</h4></li>
+                                        <li>
+                                            <h4><i class="fa fa-check"></i>وضع الحاله {{CausesDetails.CaseStatus}}</h4></li>
+                                        <li>
+                                            <h4><i class="fa fa-check"></i>{{CausesDetails.City}}, {{CausesDetails.Governorate}}</h4></li>
+                                        <div hidden ng-model="categID" ng-init="2">{{CausesDetails.CategoryID}}</div>
+                                    </ul>
+                                    <h4>أخر معاد: {{CausesDetails.DueDate}}</h4><br><br>
+<!--
+                                    <div class="share">
+                                        <span>شارك: </span>
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-facebook"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-google-plus"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-linkedin"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+-->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end causes single -->
+                    </div>
+                    <!-- end col -->
+                    <div class="col col-md-5">
+                        <div class="img-holder">
+                                <img ng-src="{{CausesDetails.Image}}" onerror="this.src='images/causes-list-box/img-1.jpg';" alt class="img img-responsive">
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- end row -->
+
+                <div class="related-causes">
+                    <div class="row side-section-title">
+                        <div class="col col-xs-12">
+                            <h2>حالات
+                                <span>ذات صله</span>
+                            </h2>
+                        </div>
+                    </div>
+
+                    <div class="row latest-causes" >
+                        <div class="col col-md-4 col-xs-6" ng-repeat="Item in relativeCases | limitTo: 3">
+                            <div class="title">
+                                <ul>
+                                    <li>
+                                        <h3>{{Item.Name}}</h3>
+<!--                                        <h4>{{Item.Category}}</h4>-->
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-map-marker"></i> {{Item.Governorate}} , {{Item.City}}</li>
+                                </ul>
+                            </div>
+                            <div class="img-progress">
+                                <div class="img-holder">
+                                    <img ng-src="{{Item.Image}}" onerror="this.src='images/causes-list-box/img-1.jpg';" alt class="img img-responsive">
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" data-percent="{{ (Item.CurrentAmount/Item.RequiredAmount)}}"></div>
+                                </div>
+                            </div>
+                            <div class="donate-amount">
+                                <ul>
+                                    <li>الحالي:
+                                        <span>{{Item.CurrentAmount}}</span> / {{Item.RequiredAmount}}</li>
+                                    <li>
+                                        <i class="fa fa-clock-o"></i> {{Item.DueDate}}</li>
+                                </ul>
+                            </div>
+                            <div class="text">
+                                <p ng-bind-html="Item.Description"></p>
+                                <a href="#" class="btn theme-btn">أنضم الان</a>
+                            </div>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <!-- end related-causes -->
+            </div>
+            <!-- end contianer -->
+        </section>
+        <!-- end causes-single-wrapper -->
+
+    </div>
+    <!-- end of page-wrapper -->
+
+    <!-- Custom script for this template -->
+    <script src="js/script.js"></script>

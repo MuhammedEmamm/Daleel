@@ -1,0 +1,309 @@
+<header id="header" class="header-style-three">
+		<div class="topbar">
+			<div class="upper-topbar">
+				<div class="container">
+					<div class="row">
+						<div class="col col-sm-8">
+							<div class="contact-info">
+								<ul>
+									<li>
+										<i class="fa fa-map-marker"></i> {{charityContact.Address}}</li>
+									<li>
+										<i class="fa fa-mobile"></i> {{charityContact.Mobile}}</li>
+									<li>
+										<i class="fa fa-envelope-o"></i> {{charityContact.Email}}</li>
+								</ul>
+                                
+							</div>
+						</div>
+
+						<div class="col col-sm-2">
+							<div class="social">
+								<ul>
+									<li><a ng-href="http://{{charityContact.FacebookCount}}"><i class="fa fa-facebook"></i></a></li>
+
+								</ul>
+							</div>
+						</div>
+						
+
+					</div>
+				</div>
+			</div>
+			<!-- end upper-topbar -->
+
+			
+
+		</div>
+		<!-- end top-bar -->
+
+		<nav class="navigation navbar navbar-default" id="main-navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="open-btn">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+				</div>
+				<div class="col-xs-11">
+					<div id="navbar" class="navbar-collapse collapse col-lg-8">
+						<button class="close-navbar">
+                                <i class="fa fa-close"></i>
+                            </button>
+						<ul class="nav navbar-nav">
+							<li >
+								<a href="#">الرئيسيه</a>
+
+							</li>
+							<li>
+								<a href="#about">من نحن</a>
+
+							</li>
+							<li>
+								<a href="#CSR">CSR</a>
+
+							</li>
+							<li>
+								<a href="#cases">الحالات</a>
+
+							</li>
+							<li>
+								<a href="#gallery">معرض الصور</a>
+
+							</li>
+							<li>
+								<a href="#Events">الاحداث</a>
+
+							</li>
+							<li>
+								<a href="#programs">برامجنا</a>
+
+							</li>
+							<li>
+								<a href="#info">أخبار</a>
+							</li>
+                            <li>
+								<a href="#BloodBank">بنك الدم</a>
+							</li>
+							<li>
+								<a href="#contact">تواصل معنا</a>
+							</li>	<li >
+								<a href="#SeasonalProjects">مشاريع موسمية</a>
+							</li><li >
+								<a href="#Organizations">جمعيات</a>
+							</li>
+							<li class="current">
+								<a href="#join-us">انضم لنا</a>
+							</li>
+						</ul>
+					</div>
+					<!-- end of nav-collapse -->
+
+
+				</div>
+								<div class="col-xs-1"><img style="width: 130px ; margin-right:-50%" src="images/preloder.png"></div>
+
+			</div>
+			<!-- end of container -->
+		</nav>
+	</header>
+
+<!-- start page-wrapper -->
+<div class="page-wrapper gallery-4col">
+
+	<!-- start page-title -->
+	<section class="page-title" style="height: 300px">
+		<div class="page-title-bg"></div>
+		<div class="container">
+			<div class="title-box">
+				<h1>أنضم لنا</h1>
+				<ol class="breadcrumb">
+					<li><a href="#">الرئيسيه</a></li>
+					<li><a href="#">الحالات</a></li>
+					<li class="active">أنضم لنا</li>
+				</ol>
+			</div>
+		</div>
+		<!-- end container -->
+	</section>
+	<!-- end page-title -->
+
+
+	<!-- start gallery-4col-content -->
+	<section class="gallery-4col-content sortable-gallery gallery section-padding">
+		<!--// Main Section \\-->
+		<div class="findhome-main-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<div class="findhome-faq-tabs">
+							<!-- Nav tabs -->
+							<ul class="nav nav-tabs" role="tablist">
+								<li role="presentation" class="active"><a style="cursor: pointer" data-target="#home" aria-controls="home" role="tab" data-toggle="tab">تسجيل متطوع</a></li>
+								<li role="presentation"><a style="cursor: pointer" data-target="#profile" aria-controls="profile" role="tab" data-toggle="tab">مجموعه</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-9">
+						<!-- Tab panes -->
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane fade in active" id="home">
+								<div class="findhome-login-text">
+									<h2>شارك او سجل معنا كمتطوع</h2>
+									<div class="findhome-login-form">
+										<form ng-submit="Register()">
+											<ul>
+												<li>
+													<input value="أسم المستخدم" onblur="if(this.value == '') { this.value ='اسم المستخدم'; }" onfocus="if(this.value =='اسم المستخدم') { this.value = ''; }" type="text" ng-model="VName" required>
+													<i class="fa fa-user"></i>
+												</li>
+												<li>
+													<input value="البريد الالكتروني" onblur="if(this.value == '') { this.value ='البريد الالكتروني'; }" onfocus="if(this.value =='البريد الالكتروني') { this.value = ''; }" type="email" ng-model="VEmail" required>
+													<i class="fa fa-at"></i>
+												</li>
+												<li>
+													<input value="رقم الهاتف" onblur="if(this.value == '') { this.value ='رقم الهاتف'; }" onfocus="if(this.value =='رقم الهاتف') { this.value = ''; }" type="text" ng-model="VContact" required>
+													<i class="fa fa-mobile"></i>
+
+												</li>
+												<li>
+													<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+														<div class="panel panel-default">
+															<div class="panel-heading" role="tab" id="headingOne">
+																<h4 class="panel-title" data-target="#collapseOne" data-toggle="collapse" style="cursor: pointer">
+																	اختر الفئة
+																</h4>
+															</div>
+															<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+																<div class="panel-body">
+																	<div ng-repeat="x in categories">
+																		<label>{{x.Name}}</label>
+																		<input id="{{x.ID}}" type="checkbox" ng-value="{{x.ID}}" ng-model="cat[$index]" ng-click="showcat()">
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													
+												</li>
+												<li>
+													<button class="btn theme-btn" type="submit">تسجيل متطوع</button>
+												</li>
+											</ul>
+										</form>
+									</div>
+
+								</div>
+							</div>
+							<div role="tabpanel" class="tab-pane fade" id="profile">
+								<div class="findhome-login-text">
+									<h2>سجل كمجموعه</h2>
+									<form ng-submit="RegisterOrg()">
+										<div class="form-group">
+											<label>اسم الجمعية بالانجليزية:</label><br>
+											<input type="text" ng-model="OrgNameEn" class="form-group" style="width: 60%">
+										</div>
+										<div class="form-group">
+											<label> اسم الجمعية بالعربية:</label><br>
+											<input type="text" ng-model="OrgNameAr" class="form-group" style="width: 60%">
+										</div>
+										<div class="form-group">
+											<label>البريد الإلكتروني:</label><br>
+											<input type="text" ng-model="UserName" class="form-group" style="width: 60%">
+										</div>
+										<div class="form-group">
+											<label>كلمة المرور:</label><br>
+											<input type="password" ng-model="Passowrd" class="form-group" style="width: 60%">
+										</div>
+										<div class="form-group">
+											<label>الوصف بالانجليزية: </label><br>
+											<textarea type="text" ng-model="DescEn" class="form-group" style="width: 60%"> </textarea>
+										</div>
+										<div class="form-group">
+											<label>الوصف بالعربية:</label><br>
+											<textarea type="text" ng-model="DescAr" class="form-group" style="width: 60%"> </textarea>
+										</div>
+										<div class="form-group">
+											<label>العنوان بالانجليزية:</label><br>
+											<input type="text" ng-model="AddressEn" class="form-group" style="width: 60%">
+										</div>
+										<div class="form-group">
+											<label>العنوان بالعربية:</label><br>
+											<input type="text" ng-model="AddressAr" class="form-group" style="width: 60%">
+										</div>
+
+										<div class="form-group">
+											<select ng-model="City" ng-init="City=0" ng-change="getCityId()" style="border-radius: 5px ; width: 60% ">
+					<option ng-value="0" disabled >اختر المدينة</option>
+					<option ng-repeat="x in Cities" ng-value="x.ID">{{x.Name}}</option>
+				</select>
+										</div>
+										<div class="form-group">
+											<select ng-model="Region" ng-init="Region=0" style="border-radius: 5px ; width: 60% ">
+					<option ng-value="0" disabled >اختر المنطقة</option>
+					<option ng-repeat="x in Regions" ng-value="x.ID">{{x.Name}}</option>
+				</select>
+										</div>
+
+										<div class="form-group">
+
+							<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+														<div class="panel panel-default">
+															<div class="panel-heading" role="tab" id="headingOne">
+																<h4 class="panel-title" data-target="#collapseOne" data-toggle="collapse" style="cursor: pointer">
+																	اختر الفئة
+																</h4>
+															</div>
+															<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+																<div class="panel-body">
+																	<div ng-repeat="x in categories">
+																		<label>{{x.Name}}</label>
+																		<input  type="checkbox" ng-value="{{x.ID}}" ng-model="cat1[$index]" ng-click="showcat1()">
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													
+										</div>
+										<button class="btn theme-btn btn-lg" type="submit" style="margin-left: -50%">تسجيل</button>
+									</form>
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--// Main Section \\-->
+	</section>
+	<!-- end gallery-3col-content -->
+</div>
+<!-- end of page-wrapper -->
+<div class="modal fade" tabindex="-1" role="dialog" id="Done">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">التسجيل كامتطوع</h4>
+			</div>
+			<div class="modal-body">
+				<h3> تم إضافة متطوع جديد سيقوم أحد أفراد الفريق بالتواصل معكم &hellip;</h3>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">غلق</button>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+
+<!-- Custom script for this template -->
+<script src="js/script.js"></script>

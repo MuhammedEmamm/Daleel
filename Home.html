@@ -1,0 +1,771 @@
+<header id="header" class="header-style-three">
+		<div class="topbar">
+			<div class="upper-topbar">
+				<div class="container">
+					<div class="row">
+						<div class="col col-sm-8">
+							<div class="contact-info">
+								<ul>
+									<li>
+										<i class="fa fa-map-marker"></i> {{charityContact.Address}}</li>
+									<li>
+										<i class="fa fa-mobile"></i> {{charityContact.Mobile}}</li>
+									<li>
+										<i class="fa fa-envelope-o"></i> {{charityContact.Email}}</li>
+								</ul>
+                                
+							</div>
+						</div>
+
+						<div class="col col-sm-2">
+							<div class="social">
+								<ul>
+									<li><a ng-href="http://{{charityContact.FacebookCount}}"><i class="fa fa-facebook"></i></a></li>
+
+								</ul>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<!-- end upper-topbar -->
+
+			
+
+		</div>
+		<!-- end top-bar -->
+
+		<nav class="navigation navbar navbar-default" id="main-navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="open-btn">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+				</div>
+				<div class="col-xs-11">
+					<div id="navbar" class="navbar-collapse collapse col-lg-6">
+						<button class="close-navbar">
+                                <i class="fa fa-close"></i>
+                            </button>
+						<ul class="nav navbar-nav">
+							<li class="current">
+								<a href="#">الرئيسيه</a>
+
+							</li>
+							<li>
+								<a href="#about">من نحن</a>
+
+							</li>
+							<li>
+								<a href="#CSR">CSR</a>
+
+							</li>
+							<li>
+								<a href="#cases">الحالات</a>
+
+							</li>
+							<li>
+								<a href="#gallery">معرض الصور</a>
+
+							</li>
+							<li>
+								<a href="#Events">الاحداث</a>
+
+							</li>
+							<li>
+								<a href="#programs">برامجنا</a>
+
+							</li>
+							<li>
+								<a href="#info">أخبار</a>
+							</li>
+                            <li>
+								<a href="#BloodBank">بنك الدم</a>
+							</li>
+							<li>
+								<a href="#contact">تواصل معنا</a>
+							</li>	<li >
+								<a href="#SeasonalProjects">مشاريع موسمية</a>
+							</li><li >
+								<a href="#Organizations">جمعيات</a>
+							</li><li >
+								<a href="#join-us">انضم لنا</a>
+							</li>
+							<li >
+
+							</li>
+							
+						</ul>
+					</div>
+					<!-- end of nav-collapse -->
+
+
+				</div>
+				<div class="col-xs-1"><img style="width: 130px ; margin-right:-50%" src="images/preloder.png"></div>
+				
+			</div>
+			<!-- end of container -->
+		</nav>
+	</header>
+
+	<!-- start page-wrapper -->
+    <div class="page-wrapper home-style-three" onload="topScrolling()">
+
+        <!-- start of hero -->
+        <section class="hero hero-style-three hero-slider-wrapper">
+            <!-- <div class="hero-slider">
+                <div class="slide">
+                    <img src="images/slider/slide-3.jpg" alt>
+                    <div class="container">
+                        <div class="col col-sm-8 slider-title">
+                            <h1>خلي الخير
+                                <span>عاده </span>
+                            </h1>
+                            <p>نام ليبيرو تيمبور، كوم سولوتا نوبيس إست إليجيندي أوبتيو كومك نيهيل إمبديت نو ناقص إد كود ماكسيم
+                                بلاسيت فاكير.</p>
+                            <a href="causes-single.html" class="btn theme-btn">حالتنا</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/slider/slide-2.jpg" alt>
+                    <div class="container">
+                        <div class="col col-sm-8 slider-title">
+                            <h1>رعاية الطفل </h1>
+                            <p>نام ليبيرو تيمبور، كوم سولوتا نوبيس إست إليجيندي أوبتيو كومك نيهيل إمبديت نو ناقص إد كود ماكسيم
+                                بلاسيت فاكير.</p>
+                            <a href="causes-single.html" class="btn theme-btn">حالتنا</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/slider/slide-1.jpg" alt>
+                    <div class="container">
+                        <div class="col col-sm-8 slider-title">
+                            <h1>خلي الخير
+                                <span>عاده </span>
+                            </h1>
+                            <p>نام ليبيرو تيمبور، كوم سولوتا نوبيس إست إليجيندي أوبتيو كومك نيهيل إمبديت نو ناقص إد كود ماكسيم
+                                بلاسيت فاكير.</p>
+                            <a href="causes-single.html" class="btn theme-btn">حالتنا</a>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <ul class='slideshow'>
+                <li>
+                    <span>Summer</span>
+                </li>
+                <li>
+                    <span>Fall</span>
+                </li>
+                <li>
+                    <span>Winter</span>
+                </li>
+                <li>
+                    <span>Spring</span>
+                </li>
+            </ul>
+            <div class="Search" ng-init="rotPramFun()">
+                <div class="intro-content text-center">
+                    <section class="search-filters">
+                        <div class="container">
+                            <div class="filter-box">
+                                <h3> أبحث في كلنـــا دليل الخير .. خلي الخير عاده</h3>
+                                <form action="" method="get">
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="keywords">Search by Keyword</label>
+                                            <input class="form-control" placeholder="أبحث بالاسم" id="keywords" name="keywords" type="text" ng-model="keywSearch">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="form-group">
+                                            <select name="catalog1" id="catalog1" class="form-control" style="height: 40px" ng-model="gov" ng-options="x.ID as x.Name for x in govs" ng-change="getregs(gov)">
+                                                <option selected value="">المحافظة</option>
+                                                <!--<option ng-repeat="x in regs">{{x.Name}}</option>-->
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="form-group">
+                                            <select name="catalog" id="catalog" class="form-control" style="height: 40px" ng-model="areaSearch" ng-options="x.Name as x.Name for x in regs">
+                                                <option selected value="">المنطقه</option>
+                                                <!--<option ng-repeat="x in regs">{{x.Name}}</option>-->
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="form-group">
+                                            <select name="category" id="category" class="form-control" style="height: 40px" ng-model="typCaseSearch" ng-options="x.Name as x.Name for x in category">
+                                                <option selected value="">نوع الحاله</option>
+                                                <!--<option ng-repeat="x in category">{{x.Name}}</option>-->
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="form-group">
+                                            <select name="category" id="category" class="form-control" style="height: 40px" ng-model="organSearch" ng-options="x.Name as x.Name for x in orgns">
+                                                <option selected value="">الجمعية</option>
+                                                <!--<option ng-repeat="x in orgns">{{x.Name}}</option>-->
+                                            </select>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-offset-4 col-md-4 col-sm-6">
+                                        <div >
+                                            <!--<a class="form-control shop-button bg-color large" ng-href="#cases/{{keywSearch ? 'keyword/' + keywSearch : ''}}/{{typCaseSearch ? 'type/' + typCaseSearch : ''}}/{{organSearch ? 'org/' + organSearch : ''}}/{{areaSearch ? 'area/' + areaSearch : ''}}">أبحث</a>-->
+                                            <a class="form-control shop-button bg-color large" ng-href="#cases/keyword/{{keywSearch ? keywSearch : ' '}}/type/{{typCaseSearch ? typCaseSearch : ' '}}/org/{{organSearch ? organSearch : ' '}}/area/{{areaSearch ? areaSearch : ' '}}/program/  /">أبحث</a>
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+        </section>
+        <!-- end of hero slider -->
+
+        <!-- start important-causes -->
+        <section class="important-causes section-padding">
+            <div class="container">
+                <div class="row section-title-s3">
+                    <div class="col col-md-10 col-md-offset-1">
+                        <h2>
+                               الحالات<span>الطارئة</span></h2>
+                    </div>
+                </div>
+                <!-- end section-title -->
+
+                <div class="row content important-causes-content">
+                    <div class="col col-md-4 col-xs-6" ng-repeat="x in ucases | limitTo: 6">
+                        <div class="grid" ng-style="{'background-image':'url({{x.Image}})'}" style="background-size: 100% 100%">
+                            <div class="details" >
+                                <span class="time-count">{{x.DueDate}}</span>
+                                <h3>{{x.Name}}</h3>
+                            </div>
+                            <div class="causes-info">
+                                <div class="goal-meter">
+                                    <div class="goal">
+                                        <span>الغايه</span>
+                                        <h4>{{x.RequiredAmount}}</h4>
+                                    </div>
+                                    <div class="meter3" data-value="{{ (x.CurrentAmount/x.RequiredAmount)}}">
+                                        <span></span>
+                                        <p>اكتمل</p>
+                                    </div>
+                                    <div class="raised">
+                                        <span>الحالي</span>
+                                        <h4>{{x.CurrentAmount}}</h4>
+                                    </div>
+                                </div>
+                                <a href="#case-details" ng-click="getCausesId(x.ID)" ng-href="#case-details/{{x.ID}}" class="btn">شاهد الحالة</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="more-causes">
+                        <a href="#cases" class="btn theme-btn">المزيد من الحالات</a>
+                    </div>
+                </div>
+            </div>
+            <!-- end container -->
+        	</section>
+        <!-- end important-causes -->
+
+        <!-- start all-causes -->
+        <section class="important-causes section-padding">
+            <div class="container">
+                <div class="row section-title-s3">
+                    <div class="col col-md-10 col-md-offset-1">
+                        <h2>
+                               جميع<span>الحالات</span></h2>
+                    </div>
+                </div>
+                <!-- end section-title -->
+                <div class="row content important-causes-content">
+                    <div class="col col-md-4 col-xs-6" ng-repeat="Item in Result| limitTo: 5"  >
+                        <div class="grid" ng-style="{'background-image':'url({{Item.Image}})'}" style="background-size: 100% 100% " onerror="this.style.background-image='images/daleel.jpg'" >
+                            <div class="details" >
+                                <span class="time-count">{{Item.DueDate}}</span>
+                                <h3>{{Item.Name}}</h3>
+                            </div>
+                            <div class="causes-info">
+                                <div class="goal-meter">
+                                    <div class="goal">
+                                        <span>الغايه</span>
+                                        <h4>{{Item.RequiredAmount}}</h4>
+                                    </div>
+                                    <div class="meter3" data-value="{{ (Item.CurrentAmount/Item.RequiredAmount)}}">
+                                        <span></span>
+                                        <p>اكتمل</p>
+                                    </div>
+                                    <div class="raised">
+                                        <span>الحالي</span>
+                                        <h4>{{Item.CurrentAmount}}</h4>
+                                    </div>
+                                </div>
+                                <a href="#case-details" ng-click="getCausesId(Item.ID)" ng-href="#case-details/{{Item.ID}}" class="btn">شاهد الحالة</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="more-causes">
+                        <a href="#cases" class="btn theme-btn">المزيد من الحالات</a>
+                    </div>
+                </div> 
+                
+               
+            </div>
+            <!-- end container -->
+        </section>
+        <!-- end all-causes -->
+
+        <!-- start fun-fact -->
+        <section class="fun-fact section-padding">
+            <div class="container" style="text-align: center">
+                <div class="row top-part">
+                    <div class="col col-sm-4">
+                        <span class="icon">
+                            <i class="fi flaticon-eco-volunteer"></i>
+                        </span>
+                        <h3>عدد
+                            <span>الحالات</span>
+                        </h3>
+                        
+                    </div>
+                    <div class="col col-sm-4">
+                        <span class="icon">
+                            <i class="fi flaticon-make-a-donation"></i>
+                        </span>
+                        <h3>بنوك
+                            <span>الدم</span>
+                        </h3>
+                    </div>
+                    <div class="col col-sm-4">
+                        <span class="icon">
+                            <i class="fi flaticon-people"></i>
+                        </span>
+                        <h3>المنظمات
+                            <span>المتعاونة</span>
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="row bottom-row">
+                    <div class="col col-xs-4">
+                        <h2 class="counter" data-count="{{casesCounter}}">00</h2>
+                        <span>حالة</span>
+                    </div>
+                    <div class="col col-xs-4">
+                        <h2 class="counter" data-count="{{bloodBanksCounter}}">00</h2>
+                        <span>بنك</span>
+                    </div>
+                    <div class="col col-xs-4">
+                        <h2 class="counter" data-count="{{organizationCounter}}">00</h2>
+                        <span>منظمة</span>
+                    </div>
+                   
+                </div>
+            </div>
+            <!-- end container -->
+        </section>
+        <!-- end fun-fact -->
+
+
+        <!-- start gallery-st2 -->
+        <section class="gallery-fullwidth-content sortable-gallery gallery section-padding">
+            <h2 class="hidden">Gallery</h2>
+            <div class="row section-title-s4">
+                    <div class="col col-md-8 col-md-offset-2">
+                        <h2>
+                            <span>لدينا</span> معرض</h2>
+                    </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col col-lg-12">
+                        
+                        <!--images/gallery/big-photo/img-1.jpg-->
+                        <div class="gallery-container popup-gallery">
+                            <div class="box water education africa col col-md-3 col-xs-6" ng-repeat="picture in gall | limitTo: 8">
+                                <a class="picsSize" href="{{picture.ImageURL}}">
+                                    <img class="picsSize" ng-src="{{picture.ImageURL}}" alt class="img img-responsive">
+                                </a>
+                                <br>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- end col -->
+                </div>
+                <!-- end row -->
+                <br><br>
+                <div class="more-causes col-md-4 col-md-offset-5">
+                    <a href="#gallery" class="btn theme-btn">المزيد من الصور</a>
+                </div>
+            </div>
+            <!-- end container -->
+        </section>
+        <!-- end gallery-3col-content -->
+        <br>
+        <!-- start test-gallery-st2 -->
+        <section class="gallery-st2 sortable-gallery gallery section-padding">
+            
+            <div class="container">
+
+                <div class="row">
+                    <div class="col col-lg-12">
+                        <div class="gallery-container masonry-gallery popup-gallery">    
+                        </div>
+                    </div>
+                    <!-- end col -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+        </section>
+        
+        <!-- end gallery-st2 -->
+        <!-- start cta-2 -->
+        <section class="cta-2">
+            <div class="container-fluid">
+                <div class="row" >
+                    <div class="col col-md-6 col-sm-6">
+                        <img  src="images/join-us-bg.jpg" style="height: 300px">
+                    </div>
+
+                    <div class="col col-md-5 col-sm-5 sing-up " style="height: 300px">
+                        <h3>
+                            <span>
+                                <img src="images/sing-up-icon.png" alt>
+                            </span> الاشتراك في برنامج المتطوعين</h3>
+                        <span>خدمة الإنسانية</span>
+                        <p>يمكنك الان الاشتراك معنا ....</p>
+                        <a href="#join-us" class="btn theme-btn">سجل</a>
+                    </div>
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+        </section>
+        <!-- end cta-2 -->
+        
+
+        <!-- start about-st2 -->
+        <section class="about-st3 section-padding">
+            <h2 class="hidden">عنا</h2>
+            <div class="container" ng-controller="Homectrl">
+                <div class="row">
+                    <div class="col col-md-7">
+                        <div class="left-col">
+                            <div class="logo">
+                                <img src="images/logo-2.png" alt class="img img-responsive">
+                            </div>
+                            <span>خلي الخير عاده</span>
+                            <div class="our-location">
+                                <!--<img src="images/location-bg.png" alt class="img img-responsive">-->
+                                <div id="gmap">
+                                    <ng-map center="{{lat}}, {{long}}" zoom="13" >
+                                      <marker ng-click="MarkerTitle()" title="{{searchPlace.Name}}, {{searchPlace.Area}}" ng-repeat="p in places track by $index" position="{{p.Latitude}}, {{p.Longitude}}"></marker>
+                                    </ng-map>
+                                  </div>
+                                <!--<div id="map"></div>-->
+                                <!--<div class="location location-one">
+                                    <div class="location-btn">
+                                        <i class="fi flaticon-placeholder"></i>
+                                    </div>
+                                    <div class="location-info">
+                                        <h5>فريق رمضان</h5>
+                                        <ul>
+                                            <li>
+                                                <i class="fi flaticon-group-of-people-cartoon-variant"></i>
+                                                3.5k
+                                            </li>
+                                            <li>
+                                                <i class="fi flaticon-money-3"></i>
+                                                $102k
+                                            </li>
+                                        </ul>
+                                        <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.7898246149844!2d89.5601340147084!3d22.810250485060976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ff901d89110f01%3A0x8dbefa2e360efc60!2z4Kaw4Kef4KeH4KayIOCmruCni-CnnA!5e0!3m2!1sbn!2sbd!4v1486012212575"
+                                            class="map-link">موقع</a>
+                                    </div>
+                                </div>
+
+                                <div class="location location-two">
+                                    <div class="location-btn">
+                                        <i class="fi flaticon-placeholder"></i>
+                                    </div>
+                                    <div class="location-info">
+                                        <h5>فريق رمضان</h5>
+                                        <ul>
+                                            <li>
+                                                <i class="fi flaticon-group-of-people-cartoon-variant"></i>
+                                                3.5k
+                                            </li>
+                                            <li>
+                                                <i class="fi flaticon-money-3"></i>
+                                                $102k
+                                            </li>
+                                        </ul>
+                                        <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.7898246149844!2d89.5601340147084!3d22.810250485060976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ff901d89110f01%3A0x8dbefa2e360efc60!2z4Kaw4Kef4KeH4KayIOCmruCni-CnnA!5e0!3m2!1sbn!2sbd!4v1486012212575"
+                                            class="map-link">الموقع</a>
+                                    </div>
+                                </div>
+
+                                <div class="location location-three">
+                                    <div class="location-btn">
+                                        <i class="fi flaticon-placeholder"></i>
+                                    </div>
+                                    <div class="location-info">
+                                        <h5>فريق رمضان</h5>
+                                        <ul>
+                                            <li>
+                                                <i class="fi flaticon-group-of-people-cartoon-variant"></i>
+                                                3.5k
+                                            </li>
+                                            <li>
+                                                <i class="fi flaticon-money-3"></i>
+                                                $102k
+                                            </li>
+                                        </ul>
+                                        <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.7898246149844!2d89.5601340147084!3d22.810250485060976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ff901d89110f01%3A0x8dbefa2e360efc60!2z4Kaw4Kef4KeH4KayIOCmruCni-CnnA!5e0!3m2!1sbn!2sbd!4v1486012212575"
+                                            class="map-link">الموقع</a>
+                                    </div>
+                                </div>
+
+                                <div class="location location-four">
+                                    <div class="location-btn">
+                                        <i class="fi flaticon-placeholder"></i>
+                                    </div>
+                                    <div class="location-info">
+                                        <h5>فريق رمضان</h5>
+                                        <ul>
+                                            <li>
+                                                <i class="fi flaticon-group-of-people-cartoon-variant"></i>
+                                                3.5k
+                                            </li>
+                                            <li>
+                                                <i class="fi flaticon-money-3"></i>
+                                                $102k
+                                            </li>
+                                        </ul>
+                                        <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.7898246149844!2d89.5601340147084!3d22.810250485060976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ff901d89110f01%3A0x8dbefa2e360efc60!2z4Kaw4Kef4KeH4KayIOCmruCni-CnnA!5e0!3m2!1sbn!2sbd!4v1486012212575"
+                                            class="map-link">الموقع</a>
+                                    </div>
+                                </div>
+
+                                <div class="location location-five">
+                                    <div class="location-btn">
+                                        <i class="fi flaticon-placeholder"></i>
+                                    </div>
+                                    <div class="location-info">
+                                        <h5>فريق رمضان</h5>
+                                        <ul>
+                                            <li>
+                                                <i class="fi flaticon-group-of-people-cartoon-variant"></i>
+                                                3.5k
+                                            </li>
+                                            <li>
+                                                <i class="fi flaticon-money-3"></i>
+                                                $102k
+                                            </li>
+                                        </ul>
+                                        <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.7898246149844!2d89.5601340147084!3d22.810250485060976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ff901d89110f01%3A0x8dbefa2e360efc60!2z4Kaw4Kef4KeH4KayIOCmruCni-CnnA!5e0!3m2!1sbn!2sbd!4v1486012212575"
+                                            class="map-link">الموقع</a>
+                                    </div>
+                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of col -->
+
+                    <div class="col col-md-5">
+                        <div class="right-col">
+                            <!-- <div class="panel-group" id="accordion">
+                                <div class="panel panel-default current">
+                                    <div class="panel-heading">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true">هدف المنظمة</a>
+                                    </div>
+                                    <div id="collapseOne" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            <p>لوريم إيبسوم دولور سيت أميت، كونسكتيتور أديبيسشينغ إليت، سيد دو إيسمود تيمبور
+                                                إنسيدونت أوت لابور إت دولور ماغنا أليكوا.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">كيف تتطوع؟</a>
+                                    </div>
+                                    <div id="collapseTwo" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <p>لوريم إيبسوم دولور سيت أميت، كونسكتيتور أديبيسشينغ إليت، سيد دو إيسمود تيمبور
+                                                إنسيدونت أوت لابور إت دولور ماغنا أليكوا.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">عملية العمل من شاريت</a>
+                                    </div>
+                                    <div id="collapseThree" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <p>لوريم إيبسوم دولور سيت أميت، كونسكتيتور أديبيسشينغ إليت، سيد دو إيسمود تيمبور
+                                                إنسيدونت أوت لابور إت دولور ماغنا أليكوا.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <section class="search-filters Parteners_search">
+                                <div class="filter-box">
+                                    <h3> ابحث عن شركئنا</h3>
+                                    
+                                    <!--<form action="" method="get">-->
+                                            <form name="searchForm" novalidate ng-submit="search()">
+                                                
+                                                
+                                                <div class=" col-sm-6">
+                                                   <div class="form-group">
+                                                   <label>المحافظة</label>
+                                                    <select ng-model="gover" class="form-control" ng-change="getregs(gover)" ng-options="x.ID as x.Name for x in govs" required autofocus>
+                                                        
+                                                        <!--<option disabled ng-value="0">المنطقه</option>
+                                                        <option ng-repeat="x in regs">{{x.Name}}</option>-->
+                                                    </select>
+                                                   </div>
+                                                </div>  <div class=" col-sm-6">
+                                                   <div class="form-group">
+                                                   <label>المنطقه</label>
+                                                    <select ng-model="regions" class="form-control" ng-change="selectRegion()" ng-options="x.ID as x.Name for x in regs" required autofocus>
+                                                        
+                                                        <!--<option disabled ng-value="0">المنطقه</option>
+                                                        <option ng-repeat="x in regs">{{x.Name}}</option>-->
+                                                    </select>
+                                                   </div>
+                                                </div>
+                                                
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label>المنظمه</label>
+                                                        <select ng-model="searchPlace" class="form-control" ng-change="selectOrgan()" ng-options="x as x.Name for x in orgByRegion" style=" padding: 4px 3px" required >
+                                                            
+                                                            <!--<option disabled ng-value="0">المنظمه</option>
+                                                            <option ng-repeat="x in orgOfRegion">{{x.Name}}</option>-->
+                                                        </select>
+                                                    <!--<input name="place" type="text" class="form-control" 
+                                                    ng-model="searchPlace" required autofocus />-->
+                                                    </div>
+                                                </div>
+                                                
+                                                <div  class="col-md-offset-4 col-md-4 col-sm-6">
+                                                    <span class="input-group-btn">
+                                                    <button class="btn btn-primary" ng-disabled="searchForm.$invalid" ng-click="orgSearchSubmit()">Search</button>
+                                                </span>
+                                                </div>
+                                            </form>
+                                            <!--<div class="form-group">
+                                                <label class="sr-only" for="keywords">Search by Keyword</label>
+                                                <input class="form-control" placeholder="أبحث بالاسم" id="keywords" name="keywords" type="text">
+                                            </div>-->
+                                        
+                                        <!--<div class=" col-sm-6">
+                                           <div class="form-group">
+                                            <select name="catalog" id="catalog" ng-model="reg" ng-init="reg = 0 " class="form-control">
+                                                <option disabled ng-value="0">المنطقه</option>
+                                                <option ng-repeat="x in regs">{{x.Name}}</option>
+                                            </select>
+                                           </div>
+                                        </div>
+
+
+
+
+                                        <div class="col-md-offset-4 col-md-4 col-sm-6">
+                                            <div class="form-group">
+                                                <input class="form-control shop-button bg-color large" type="submit" value="أبحث">
+                                            </div>
+                                        </div>-->
+                                    <!--</form>-->
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end container -->
+        </section>
+        <!-- end about-st2 -->
+        <!--<div class="container" ng-app="myapp" ng-controller="newPlaceCtrl">
+    
+    <h3 class="clearfix">
+        <img class="pull-left" src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/AngularJS_logo.svg/695px-AngularJS_logo.svg.png"/>
+        <img class="pull-right" src="http://upload.wikimedia.org/wikipedia/commons/9/9a/Google_maps_logo.png"/>
+    </h3>
+    
+    <div class="alert alert-danger text-center" role="alert" ng-show="apiError">
+        <b>API Error : </b>
+        <span>{{ apiStatus }}</span>
+    </div>
+    
+    <form name="searchForm" novalidate 
+    ng-submit="search()">
+        <div class="input-group">
+            <input name="place" type="text" class="form-control" 
+            ng-model="searchPlace" required autofocus />
+            <span class="input-group-btn">
+                <button class="btn btn-primary" 
+                ng-disabled="searchForm.$invalid">Search</button>
+            </span>
+        </div>
+    </form>
+        
+    <div id="map"></div>
+      
+    <form name="resForm" class="form-horizontal" novalidate 
+    ng-submit="send()">
+        <div class="form-group">
+            <label for="resName" class="col-xs-2 control-label">Name</label>
+            <div class="col-xs-10">
+                <input name="resName" type="text" class="form-control" 
+                ng-model="place.name" required />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="resLat" class="col-xs-2 control-label">Latitude</label>
+            <div class="col-xs-10">
+                <input name="resLat" type="number" class="form-control" 
+                ng-model="place.lat" required />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="resLng" class="col-xs-2 control-label">Longitude</label>
+            <div class="col-xs-10">
+                <input name="resLng" type="number" class="form-control" 
+                ng-model="place.lng" required />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-offset-2 col-xs-10">
+                <button class="btn btn-success" 
+                ng-disabled="resForm.$invalid">Confirm</button>
+            </div>
+        </div>
+    </form>-->
+    
+</div>
+    <!-- end of page-wrapper -->
+    
+    <script src="js/script.js"></script>

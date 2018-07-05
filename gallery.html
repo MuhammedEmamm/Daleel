@@ -1,0 +1,207 @@
+<!-- Start header -->
+<header id="header" class="header-style-three">
+		<div class="topbar">
+			<div class="upper-topbar">
+				<div class="container">
+					<div class="row">
+												<div class="col col-sm-8">
+							<div class="contact-info">
+								<ul>
+									<li>
+										<i class="fa fa-map-marker"></i> {{charityContact.Address}}</li>
+									<li>
+										<i class="fa fa-mobile"></i> {{charityContact.Mobile}}</li>
+									<li>
+										<i class="fa fa-envelope-o"></i> {{charityContact.Email}}</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col col-sm-2">
+							<div class="social">
+								<ul>
+									<li><a ng-href="http://{{charityContact.FacebookCount}}"><i class="fa fa-facebook"></i></a></li>
+
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!-- end upper-topbar -->
+
+			
+
+		</div>
+		<!-- end top-bar -->
+
+		<nav class="navigation navbar navbar-default" id="main-navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="open-btn">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+				</div>
+				<div class="col-xs-11">
+					<div id="navbar" class="navbar-collapse collapse col-lg-8">
+						<button class="close-navbar">
+                                <i class="fa fa-close"></i>
+                            </button>
+						<ul class="nav navbar-nav">
+							<li>
+								<a href="#">الرئيسيه</a>
+
+							</li>
+							<li>
+								<a href="#about">من نحن</a>
+
+							</li>
+							<li>
+								<a href="#CSR">CSR</a>
+
+							</li>
+							<li>
+								<a href="#cases">الحالات</a>
+
+							</li>
+							<li class="current">
+								<a href="#gallery">معرص الصور</a>
+
+							</li>
+							<li>
+								<a href="#Events">الاحداث</a>
+
+							</li>
+							<li>
+								<a href="#programs">برامجنا</a>
+
+							</li>
+							<li>
+								<a href="#info">أخبار</a>
+							</li>
+                            <li>
+								<a href="#BloodBank">بنك الدم</a>
+							</li>
+							<li>
+								<a href="#contact">تواصل معنا</a>
+							</li>	<li >
+								<a href="#SeasonalProjects">مشاريع موسمية</a>
+							</li><li >
+								<a href="#Organizations">جمعيات</a>
+							</li><li >
+								<a href="#join-us">انضم لنا</a>
+							</li>
+						</ul>
+					</div>
+					<!-- end of nav-collapse -->
+
+
+				</div>
+								<div class="col-xs-1"><img style="width: 130px ; margin-right:-50%" src="images/preloder.png"></div>
+
+			</div>
+			<!-- end of container -->
+		</nav>
+	</header>
+    <!-- start page-wrapper -->
+    <div class="page-wrapper gallery-fullwidth">
+
+        
+
+        <!-- start page-title -->
+        <section class="page-title"  style="height: 300px">
+            <div class="page-title-bg"></div>
+            <div class="container">
+                <div class="title-box">
+                    <h1>ألبوم الصور </h1>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="#">الرئيسيه</a>
+                        </li>
+
+                        <li class="active">الاستديو </li>
+                    </ol>
+                </div>
+            </div>
+            <!-- end container -->
+        </section>
+        <!-- end page-title -->
+
+
+        <!-- start gallery-3col-content -->
+        <section class="causes-list-section section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="sidebar-wrapper text-center">
+                        <div class="sidebar">
+                            <div class="widget recent-events">
+                                <label>اسم الحدث</label>
+                                <select ng-model="eventName" style="border-radius: 20px ; color: #237c77 ; width: 160px; height: 30px" ng-options="x.ID as x.Title for x in eventNa" ng-change="eventsNames()">
+                                            <!--<option selected value="">ابحث</option>
+                                            <option ng-repeat="x in category">{{x.Name}}</option>-->
+                                </select>		
+                            </div>    
+                        </div>
+                        <!-- end sidebar -->
+                    </div>
+                    <br>
+                    <hr>
+                    
+                    <!-- end col -->
+                    <div class="col col-md-12">
+                        <section class="gallery-fullwidth-content sortable-gallery gallery section-padding">
+                            <h2 class="hidden">Gallery</h2>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col col-lg-12">
+                                        <div class="gallery-container popup-gallery">
+                                            <div class="col-md-10" ng-repeat="picture in gall">
+                                                <a class="picsSize" href="{{picture.ImageURL}}">
+                                                    <img class="picsSize" ng-src="{{picture.ImageURL}}" alt class="img img-responsive"><br>
+													<b ng-bind-html="picture.Description"></b>
+													<h3 ng-if="picture.Description === null">لا يوجد وصف</h3>
+                                                </a>
+                                                <br>
+												<br><hr>
+                                                <!--<p id="demo" class="demo"></p>-->
+                                            </div>
+											<br>
+											<br>
+											<br>
+											<br>
+											<br>
+											<br>
+                                            <div class="text-center" ng-if="gall.length === 0">
+                                                <h1>No Images Matched To This Event</h1>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                </div>
+                                <!-- end row -->
+                            </div>
+                            <!-- end container -->
+                        </section>
+                        <!-- end gallery-3col-content -->
+                        
+                    </div>
+                    <!-- end col -->
+                    
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end contianer -->
+        </section>
+        
+        <!-- end gallery-3col-content -->
+
+    </div>
+    <!-- end of page-wrapper -->
+
+    <!-- Custom script for this template -->
+    <script src="js/script.js"></script>

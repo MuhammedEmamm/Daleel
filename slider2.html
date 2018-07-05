@@ -1,0 +1,44 @@
+ <!-- start urgent-donation -->
+        <section class="urgent-donation">
+            <div class="section-bg"></div>
+            <section class="Slider">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <data-owl-carousel class="owl-carousel" data-options="{navigation: true, pagination: false, rewindNav : false}">
+                                <div owl-carousel-item="" ng-repeat="item in slides track by $index" class="item" style="width: 340px;">
+                                    <div class="bg-pie">
+                                        <a href="http://yakensolution.cloudapp.net/Simpro/Portfolio/Details/{{item.Id}}">
+                                            <h3 for="newvisits">
+                                                <span class="label label-teal">{{item.Name}}</span>
+                                            </h3>
+                                        </a>
+                                        <canvas id="pie" class="chart chart-pie"
+                                                chart-data="data[$index]"
+                                                chart-labels="labels"
+                                                chart-options="options"
+                                                chart-colors="colors"
+                                                style="display: block; margin-left: 30%; max-width: 150px; max-height: 150px;"></canvas>
+                                        <h3 class="text-center">{{item.Id}}%</h3>
+                                    </div>
+                                </div>
+                            </data-owl-carousel>
+                        </div>
+                    </div>
+                </div>
+            </section>
+           
+            <div class="container">
+                <div class="row urgent-inner">
+                    <div class="col col-lg-10 col-lg-offset-1">
+                       
+                        <!-- end urgent-slider -->
+                    </div>
+                    <!-- end col -->
+                </div>
+                <!-- end row -->
+            </div> 
+
+            <!-- end container -->
+        </section>
+        <!-- end urgent-donation -->

@@ -1,0 +1,230 @@
+<!-- Start header -->
+<header id="header" class="header-style-three">
+		<div class="topbar">
+			<div class="upper-topbar">
+				<div class="container">
+					<div class="row">
+												<div class="col col-sm-8">
+							<div class="contact-info">
+								<ul>
+									<li>
+										<i class="fa fa-map-marker"></i> {{charityContact.Address}}</li>
+									<li>
+										<i class="fa fa-mobile"></i> {{charityContact.Mobile}}</li>
+									<li>
+										<i class="fa fa-envelope-o"></i> {{charityContact.Email}}</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col col-sm-2">
+							<div class="social">
+								<ul>
+									<li><a ng-href="http://{{charityContact.FacebookCount}}"><i class="fa fa-facebook"></i></a></li>
+
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!-- end upper-topbar -->
+
+			
+
+		</div>
+		<!-- end top-bar -->
+
+		<nav class="navigation navbar navbar-default" id="main-navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="open-btn">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+				</div>
+				<div class="col-xs-11">
+					<div id="navbar" class="navbar-collapse collapse col-lg-8">
+						<button class="close-navbar">
+                                <i class="fa fa-close"></i>
+                            </button>
+						<ul class="nav navbar-nav">
+							<li>
+								<a href="#">الرئيسيه</a>
+
+							</li>
+							<li>
+								<a href="#about">من نحن</a>
+
+							</li>
+							<li>
+								<a href="#CSR">CSR</a>
+
+							</li>
+							<li>
+								<a href="#cases">الحالات</a>
+
+							</li>
+							<li>
+								<a href="#gallery">معرض الصور</a>
+
+							</li>
+							<li>
+								<a href="#Events">الاحداث</a>
+
+							</li>
+							<li>
+								<a href="#programs">برامجنا</a>
+
+							</li>
+							<li>
+								<a href="#info">أخبار</a>
+							</li>
+                            <li>
+								<a href="#BloodBank">بنك الدم</a>
+							</li>
+							<li class="current">
+								<a href="#contact">تواصل معنا</a>
+							</li>	<li >
+								<a href="#SeasonalProjects">مشاريع موسمية</a>
+							</li><li >
+								<a href="#Organizations">جمعيات</a>
+							</li><li >
+								<a href="#join-us">انضم لنا</a>
+							</li>
+						</ul>
+					</div>
+					<!-- end of nav-collapse -->
+
+
+				</div>
+								<div class="col-xs-1"><img style="width: 130px ; margin-right:-50%" src="images/preloder.png"></div>
+
+			</div>
+			<!-- end of container -->
+		</nav>
+	</header>
+    <!-- start page-wrapper -->
+    <div class="page-wrapper contact-page">
+
+
+        <!-- start page-title -->
+        <section class="page-title"  style="height: 300px">
+            <div class="page-title-bg"></div>
+            <div class="container">
+                <div class="title-box">
+                    <h1>تواصل معنا</h1>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="#">الرئيسيه</a>
+                        </li>
+                        <li class="active">تواصل معنا</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- end container -->
+        </section>
+        <!-- end page-title -->
+
+
+        <!-- start contact-main-content -->
+        <section class="contact-main-content section-padding">
+            <div class="container">
+                <div class="row contact-info">
+                    <div class="col col-sm-4">
+                        <div class="wow slideInUpSlow">
+                            <span class="icon">
+                                <i class="fa fa-map-marker"></i>
+                            </span>
+                            <h3>العنوان</h3>
+                            <p>{{charityData.Address}}</p>
+                        </div>
+                    </div>
+                    <div class="col col-sm-4">
+                        <div class="wow slideInUpSlow" data-wow-delay="0.2s">
+                            <span class="icon">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                            <h3>البريد الالكتروني</h3>
+                            <p>{{charityData.Email}}</p>
+                        </div>
+                    </div>
+                    <div class="col col-sm-4">
+                        <div class="wow slideInUpSlow" data-wow-delay="0.4s">
+                            <span class="icon">
+                                <i class="fa fa-fax"></i>
+                            </span>
+                            <h3>رقم التليفون</h3>
+                            <p>{{charityData.Mobile}}</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- end contact info -->
+            </div>
+            <!-- end container -->
+
+            <div class="row map-concate-form">
+                <div class="col col-xs-12" ng-controller="newPlaceCtrl">
+                    <!--<div class="map" id="map"></div>-->
+                    <div id="gmap" style="height: 400px">
+                        <ng-map center="30.044420, 31.235712" zoom="13" >
+                            <!--<marker ng-repeat="p in places track by $index" position="{{p.Latitude}}, {{p.Longitude}}"></marker>-->
+                        </ng-map>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <div class="container">
+                        <div class="row  wow bounceInUp">
+                            <div class="col col-md-10 col-md-offset-1 form-inner">
+                                <h3>ابعت رسالتك</h3>
+                                <form class="form row" id="contact-form" ng-submit="sendMessage(user)">
+                                    <div class="col col-md-6">
+                                        <input type="text" class="form-control" name="name" placeholder="اسمك..." ng-model="user.Name" required>
+                                    </div>
+                                    <div class="col col-md-6">
+                                        <input type="email" class="form-control" name="email" placeholder="البريد الالكتروني الخاص بك..." ng-model="user.Email" required >
+                                    </div>
+                                    <div class="col col-md-12">
+                                        <!--<input type="text" class="form-control" name="subject" placeholder="الموضوع..." ng-model="user.Subject" required>-->
+                                        <select ng-model="user.Subject" class="form-control" style="background-color: #e6e6e6; height: 50px; padding: 15px 25px;" required>
+									       <option selected disabled style="display:none" value="">الموضوع...</option>
+									       <option>متطوع</option>
+                                            <option>استفسار</option>
+							             </select>
+                                    </div>
+                                    <div class="col col-md-12">
+                                        <textarea class="form-control" name="message" placeholder="اكتب رسالتك..." ng-model="user.Message" required></textarea>
+                                    </div>
+                                    <div class="col col-md-12">
+                                        <button type="submit" class="bnt theme-btn" ng-disabled="sendMessageForm.$invalid">ارسل</button>
+                                        <span id="loader">
+                                            <img src="images/contact-ajax-loader.gif" alt="Loader">
+                                        </span>
+                                    </div>
+                                    
+                                    <div class="col col-md-12">
+                                        <div id="success">شكرا تم ارسال رسالتك...</div>
+                                        <div id="error">حدث خطأ أثناء إرسال الرساله. الرجاء معاودة المحاولة في وقت لاحق.</div>
+                                    </div>
+                                    
+                                </form>
+                            </div>
+                        </div>
+                        <!-- end row -->
+                    </div>
+                    <!-- end container -->
+                </div>
+            </div>
+        </section><br><br>
+        <!-- end contact-main-content -->
+
+    </div>
+    <!-- end of page-wrapper -->
+
+
+    <!-- Custom script for this template -->
+    <script src="js/script.js"></script>

@@ -1,0 +1,258 @@
+<!-- Start header -->
+<header id="header" class="header-style-three">
+	<div class="topbar">
+		<div class="upper-topbar">
+			<div class="container">
+				<div class="row">
+					<div class="col col-sm-8">
+						<div class="contact-info">
+							<ul>
+								<li>
+									<i class="fa fa-map-marker"></i> {{charityContact.Address}}</li>
+								<li>
+									<i class="fa fa-mobile"></i> {{charityContact.Mobile}}</li>
+								<li>
+									<i class="fa fa-envelope-o"></i> {{charityContact.Email}}</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col col-sm-2">
+						<div class="social">
+							<ul>
+								<li><a ng-href="http://{{charityContact.FacebookCount}}"><i class="fa fa-facebook"></i></a></li>
+
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- end upper-topbar -->
+
+
+
+	</div>
+	<!-- end top-bar -->
+
+	<nav class="navigation navbar navbar-default" id="main-navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="open-btn">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+			</div>
+			<div class="col-xs-11">
+				<div id="navbar" class="navbar-collapse collapse col-lg-8">
+					<button class="close-navbar">
+                                <i class="fa fa-close"></i>
+                            </button>
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="#">الرئيسيه</a>
+
+						</li>
+						<li>
+							<a href="#about">من نحن</a>
+
+						</li>
+						<li>
+							<a href="#CSR">CSR</a>
+
+						</li>
+						<li>
+							<a href="#cases">الحالات</a>
+
+						</li>
+						<li>
+							<a href="#gallery">معرض الصور</a>
+
+						</li>
+						<li>
+							<a href="#Events">الاحداث</a>
+
+						</li>
+						<li>
+							<a href="#programs">برامجنا</a>
+
+						</li>
+						<li>
+							<a href="#info">أخبار</a>
+						</li>
+						<li>
+							<a href="#BloodBank">بنك الدم</a>
+						</li>
+						<li>
+							<a href="#contact">تواصل معنا</a>
+						</li>
+						<li>
+							<a href="#SeasonalProjects">مشاريع موسمية</a>
+						</li>
+						<li class="current">
+							<a href="#Organizations">جمعيات</a>
+						</li>
+						<li>
+							<a href="#join-us">انضم لنا</a>
+						</li>
+					</ul>
+				</div>
+				<!-- end of nav-collapse -->
+
+
+			</div>
+			<div class="col-xs-1"><img style="width: 130px ; margin-right:-50%" src="images/preloder.png"></div>
+
+		</div>
+		<!-- end of container -->
+	</nav>
+</header>
+
+<!-- start page-wrapper -->
+<div class="page-wrapper about-page">
+
+	<!-- start page-title -->
+	<section class="page-title" style="height: 300px">
+		<div class="page-title-bg"></div>
+		<div class="container">
+			<div class="title-box">
+				<h1>جميعات</h1>
+				<ol class="breadcrumb">
+					<li>
+						<a href="#">الرئيسيه</a>
+					</li>
+					<li class="active">جميعات</li>
+				</ol>
+			</div>
+		</div>
+		<!-- end container -->
+	</section>
+	<!-- end page-title -->
+
+
+	<!-- start about-details -->
+	<section class="about-us-st section-padding">
+		<div style="text-align: right">
+			<label>اسم الجمعية  </label>
+
+			<input placeholder=" اسم الجمعية " ng-model="orgsearch" style="border-radius: 20px ;color: #237c77 ; width: 20%; height: 30px ;"><br><br><br>
+			<label>المحافظة  </label>
+
+			<select ng-model="gov" style="border-radius: 20px ;color: #237c77 ; width: 20%; height: 30px ;" ng-options="x.ID as x.Name for x in govs" ng-change="getregs(gov)">
+
+											<!--<option selected value=""></option>
+											<option ng-repeat="x in regs">{{x.Name}}</option>-->
+									</select><br><br><br>
+			<label>المنطقة  </label>
+			<select ng-model="reg" style="border-radius: 20px ;color: #237c77 ; width: 20%; height: 30px;" ng-options="x.ID as x.Name for x in regs">
+											&nbsp;&nbsp;&nbsp;
+											<!--<option selected value=""></option>
+											<option ng-repeat="x in regs">{{x.Name}}</option>-->
+									</select><br><br><br>
+			<button ng-click="getfilterd()" type="button" class="btn" style="margin-left: 10%"> ابحث  <i class="fa fa-search"></i>&nbsp;</button>
+
+		</div>
+
+		<div class="container" ng-repeat="x in Orgs|filter:{Name:genSearch}">
+			<b style="color: black ; font-size: 25px" class="text-center"><p style="color: black">الاسم:{{x.Name}} <img ng-src="{{x.Logo}}" style="width: 100px ; height:100px" onerror="this.src='images/daleel.jpg'" ></p></b>
+			<p style="color: black ; font-size: 20px"><b> الوصف:</b></p><span ng-bind-html="x.Description"></span>
+			<p style="color: black ; font-size: 20px"> <b>العنوان:</b>{{x.Address}}</p>
+			<p style="color: black ; font-size: 20px"><b>المنطقة:</b>{{x.Area}}</p>
+			<p style="color: black ; font-size: 20px"> <b>مجالات:</b><span ng-repeat="y in x.Categories">{{y.Name}}<br></span></p>
+
+		</div>
+		<br>
+		<br>
+		<br>
+		<hr>
+	</section>
+	<!-- end about-details -->
+
+
+
+</div>
+<!-- end of page-wrapper -->
+<div class="modal fade" tabindex="-1" role="dialog" id="Register">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">تسجيل جمعية جديدة</h4>
+			</div>
+			<div class="modal-body">
+				<form ng-submit="RegisterOrg()">
+					<div class="form-group">
+						<label>اسم الجمعية بالانجليزية:</label><br>
+						<input type="text" ng-model="OrgNameEn" class="form-group">
+					</div>
+					<div class="form-group">
+						<label> اسم الجمعية بالعربية:</label><br>
+						<input type="text" ng-model="OrgNameAr" class="form-group">
+					</div>
+					<div class="form-group">
+						<label>اسم المستخدم:</label><br>
+						<input type="text" ng-model="UserName" class="form-group">
+					</div>
+					<div class="form-group">
+						<label>كلمة المرور:</label><br>
+						<input type="password" ng-model="Passowrd" class="form-group">
+					</div>
+					<div class="form-group">
+						<label>الوصف بالانجليزية: </label><br>
+						<textarea type="text" ng-model="DescEn" class="form-group"> </textarea>
+					</div>
+					<div class="form-group">
+						<label>الوصف بالعربية:</label><br>
+						<textarea type="text" ng-model="DescAr" class="form-group"> </textarea>
+					</div>
+					<div class="form-group">
+						<label>العنوان بالانجليزية:</label><br>
+						<input type="text" ng-model="AddressEn" class="form-group">
+					</div>
+					<div class="form-group">
+						<label>العنوان بالعربية:</label><br>
+						<input type="text" ng-model="AddressAr" class="form-group">
+					</div>
+
+					<div class="form-group">
+						<select ng-model="City" ng-init="City=0" ng-change="getCityId()" style="border-radius: 5px ; width: 100% ">
+					<option ng-value="0" disabled >اختر المدينة</option>
+					<option ng-repeat="x in Cities" ng-value="x.ID">{{x.Name}}</option>
+				</select>
+					</div>
+					<div class="form-group">
+						<select ng-model="Region" ng-init="Region=0" style="border-radius: 5px ; width: 100% ">
+					<option ng-value="0" disabled >اختر المنطقة</option>
+					<option ng-repeat="x in Regions" ng-value="x.ID">{{x.Name}}</option>
+				</select>
+					</div>
+
+					<div class="form-group">
+
+						<select ng-model="test" ng-init="test=0" style="border-radius: 5px ; width: 100% " ng-change="beeb()">
+								<option id="0" disabled ng-value="0">اختر الفئة</option>
+								<option ng-repeat="x in categories" id="{{x.ID}}" ng-value="{{x.ID}}">{{x.Name}}</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<button class="btn theme-btn" type="submit">تسجيل</button>
+					</div>
+				</form>
+
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+
+<!-- Custom script for this template -->
+<script src="js/script.js"></script>
