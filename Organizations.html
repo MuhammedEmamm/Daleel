@@ -135,10 +135,18 @@
 
 	<!-- start about-details -->
 	<section class="about-us-st section-padding">
-		<div style="text-align: right">
-			<label>اسم الجمعية  </label>
+		
+		<div class="col col-md-5">
+				<label>اسم الجمعية  </label>
 
-			<input placeholder=" اسم الجمعية " ng-model="orgsearch" style="border-radius: 20px ;color: #237c77 ; width: 20%; height: 30px ;"><br><br><br>
+			<input placeholder=" اسم الجمعية " ng-model="orgsearch" style="border-radius: 20px ;color: #237c77 ; width: 20%; height: 30px ;">
+			
+			</div>
+		
+	
+			<div class="col col-md-7" style="text-align: left ; margin-bottom: 5% ;">
+			
+					
 			<label>المحافظة  </label>
 
 			<select ng-model="gov" style="border-radius: 20px ;color: #237c77 ; width: 20%; height: 30px ;" ng-options="x.ID as x.Name for x in govs" ng-change="getregs(gov)">
@@ -154,20 +162,31 @@
 									</select><br><br><br>
 			<button ng-click="getfilterd()" type="button" class="btn" style="margin-left: 10%"> ابحث  <i class="fa fa-search"></i>&nbsp;</button>
 
-		</div>
+			</div>
 
-		<div class="container" ng-repeat="x in Orgs|filter:{Name:genSearch}">
-			<b style="color: black ; font-size: 25px" class="text-center"><p style="color: black">الاسم:{{x.Name}} <img ng-src="{{x.Logo}}" style="width: 100px ; height:100px" onerror="this.src='images/daleel.jpg'" ></p></b>
+
+		<div class="container" ng-repeat="x in Orgs|filter:{Name:orgsearch} |limitTo:totalDisplayed">
+			<b style="color: black ; font-size: 25px" class="text-center"><p style="color: black">{{x.Name}} <img ng-src="{{x.Logo}}" style="width: 100px ; height:100px"   onerror="this.src='images/daleel.jpg'" ></p></b>
 			<p style="color: black ; font-size: 20px"><b> الوصف:</b></p><span ng-bind-html="x.Description"></span>
 			<p style="color: black ; font-size: 20px"> <b>العنوان:</b>{{x.Address}}</p>
 			<p style="color: black ; font-size: 20px"><b>المنطقة:</b>{{x.Area}}</p>
 			<p style="color: black ; font-size: 20px"> <b>مجالات:</b><span ng-repeat="y in x.Categories">{{y.Name}}<br></span></p>
 
 		</div>
+		
 		<br>
 		<br>
 		<br>
 		<hr>
+		<div class="col col-md-6">
+				<button class="btn btn-warning btn-lg " style="margin-right: 50%" ng-click="loadMore()"  ng-if="load && totalDisplayed < Orgs.length">المزيد</button>
+		</div>
+		<div class="col-md-6">
+			<button class="btn btn-warning btn-lg " style="margin-right: 50%" ng-click="loadless()"  ng-if="load && totalDisplayed >5">الاقل</button>
+
+		</div>
+		
+		
 	</section>
 	<!-- end about-details -->
 

@@ -193,7 +193,7 @@
                                     </div>
                                     <div class="col-md-3 col-sm-6">
                                         <div class="form-group">
-                                            <select name="catalog" id="catalog" class="form-control" style="height: 40px" ng-model="areaSearch" ng-options="x.Name as x.Name for x in regs">
+                                            <select name="catalog" id="catalog" class="form-control" style="height: 40px" ng-model="areaSearch" ng-options="x.ID as x.Name for x in regs">
                                                 <option selected value="">المنطقه</option>
                                                 <!--<option ng-repeat="x in regs">{{x.Name}}</option>-->
                                             </select>
@@ -201,7 +201,7 @@
                                     </div>
                                     <div class="col-md-3 col-sm-6">
                                         <div class="form-group">
-                                            <select name="category" id="category" class="form-control" style="height: 40px" ng-model="typCaseSearch" ng-options="x.Name as x.Name for x in category">
+                                            <select name="category" id="category" class="form-control" style="height: 40px" ng-model="typCaseSearch" ng-options="x.ID as x.Name for x in category">
                                                 <option selected value="">نوع الحاله</option>
                                                 <!--<option ng-repeat="x in category">{{x.Name}}</option>-->
                                             </select>
@@ -209,7 +209,7 @@
                                     </div>
                                     <div class="col-md-3 col-sm-6">
                                         <div class="form-group">
-                                            <select name="category" id="category" class="form-control" style="height: 40px" ng-model="organSearch" ng-options="x.Name as x.Name for x in orgns">
+                                            <select name="category" id="category" class="form-control" style="height: 40px" ng-model="organSearch" ng-options="x.ID as x.Name for x in orgns">
                                                 <option selected value="">الجمعية</option>
                                                 <!--<option ng-repeat="x in orgns">{{x.Name}}</option>-->
                                             </select>
@@ -220,7 +220,7 @@
                                     <div class="col-md-offset-4 col-md-4 col-sm-6">
                                         <div >
                                             <!--<a class="form-control shop-button bg-color large" ng-href="#cases/{{keywSearch ? 'keyword/' + keywSearch : ''}}/{{typCaseSearch ? 'type/' + typCaseSearch : ''}}/{{organSearch ? 'org/' + organSearch : ''}}/{{areaSearch ? 'area/' + areaSearch : ''}}">أبحث</a>-->
-                                            <a class="form-control shop-button bg-color large" ng-href="#cases/keyword/{{keywSearch ? keywSearch : ' '}}/type/{{typCaseSearch ? typCaseSearch : ' '}}/org/{{organSearch ? organSearch : ' '}}/area/{{areaSearch ? areaSearch : ' '}}/program/  /">أبحث</a>
+                                            <a class="form-control shop-button bg-color large" ng-href="#cases/keyword/{{keywSearch ? keywSearch : ' '}}/type/{{typCaseSearch ? typCaseSearch : ' '}}/org/{{organSearch ? organSearch : ' '}}/area/{{areaSearch ? areaSearch : ' '}}/">أبحث</a>
                                             
                                             
                                         </div>

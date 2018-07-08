@@ -1412,7 +1412,12 @@ myapp.config(["$routeProvider","$locationProvider", function ($routeProvider, $l
 			templateUrl: "causes-list.html",
 			controller: "causesCtrl"
 		})
-		.when('/cases/keyword/:keywSearch/type/:typCaseSearch/org/:organSearch/area/:areaSearch/program/:programID', {
+		.when('/cases/program/:ProgramID', {
+			templateUrl: "causes-list.html",
+			controller: "causesCtrl"
+		})
+	
+		.when('/cases/keyword/:keywSearch/type/:typCaseSearch/org/:organSearch/area/:areaSearch', {
 			templateUrl: "causes-list.html",
 			controller: "causesCtrl"
 		})
@@ -1524,9 +1529,11 @@ myapp.directive('owlCarouselItem', [function () {
 myapp.controller('Mainctrl', ['$scope', '$http', function ($scope, $http, NgMap) {
     window.scrollTo(0,0);
 	
-	setInterval(function(){
-		console.clear() ;
-	} , 5000) ; 
+//	setInterval(function(){
+//		console.clear() ;
+//	} , 5000) ; 
+//	
+	
     $http({
 		method: "POST",
 		url: "http://yakensolution.cloudapp.net:80/DaleelElkheir/api/About/GetCharityInfo",
@@ -3275,53 +3282,42 @@ myapp.controller('causesCtrl', function ($scope, $http, $rootScope, $routeParams
     window.scrollTo(0, 0);	
 $scope.submitted = false  ; 
 	var y ; 
-    /*$scope.genSearch = $routeParams.keywSearch;
-    $scope.selectPlaceName = $routeParams.areaSearch;
-    $scope.selectCaseType = $routeParams.typCaseSearch;
-    $scope.selectOrgName = $routeParams.organSearch;*/
-    //$scope.rotPramFun = function () {
-    //($scope.genSearch);
-    if($scope.genSearch === ' ') {
-            $scope.genSearch = '';
-        }
-    //($scope.genSearch);
-        $scope.genSearch = $routeParams.keywSearch;
-        $scope.reg  = $routeParams.areaSearch;
-        $scope.case  = $routeParams.typCaseSearch;
-        $scope.org = $routeParams.organSearch;
-        $scope.program = $routeParams.programID;
-    //($scope.genSearch);
-    if($scope.genSearch === ' ') {
-            $scope.genSearch = '';
-        }
-    //($scope.genSearch);
-    //($scope.genSearch + "--" + $scope.case + "--" + $scope.reg + "--" + $scope.org);
- 
-    if($scope.program){
-        
-        
-        $http({
-		method: "POST",
-		url: "http://yakensolution.cloudapp.net:80/DaleelElkheir/api/OurProgram/GetCasesForProgram",
-		headers: "content-type : application/json",
-		data: {
-			Lang: "ar",
-            ProgramID: $scope.program
-		}
-	}).then(function (response) {
-			if (response.data.IsSuccess)
-				$scope.Result = response.data.Response;
-			//($scope.progs);
-		},
-		function (response) {
-			//("Error from server");
-		});
     
-    };
+    if($scope.genSearch === ' ') {
+            $scope.genSearch = '';
+        }
+    
+	$scope.genSearch = $routeParams.keywSearch;
         
-
-	if($routeParams.programID!=undefined){
-					$http({
+	if($routeParams.areaSearch === ' ')
+		$scope.reg  = undefined;
+	else
+		$scope.reg = $routeParams.areaSearch ; 
+	
+	if($routeParams.typCaseSearch === ' ')
+		$scope.case  = undefined;
+	else
+		$scope.case = $routeParams.typCaseSearch ; 
+	
+	if($routeParams.organSearch === ' ')
+		$scope.org  = undefined;
+	else
+		$scope.org = $routeParams.organSearch ; 
+	
+        $scope.program = $routeParams.programID;
+    	
+	if($scope.genSearch === ' ') {
+            $scope.genSearch = '';
+        }
+//	console.log($routeParams.areaSearch) ; 
+//	console.log($routeParams.keywSearch) ; 
+//	console.log($routeParams.organSearch) ; 
+//	console.log($routeParams.typCaseSearch) ; 
+	
+	if($routeParams.ProgramID!=undefined){
+	//	alert('sadasda'  ) ; 
+	
+	$http({
 		method: 'POST',
 		url: 'http://yakensolution.cloudapp.net:80/DaleelElkheir/api/OurProgram/GetCasesForProgram',
 		headers: {
@@ -3329,7 +3325,7 @@ $scope.submitted = false  ;
 		},
 		data: {
 			Lang: 'ar',
-			ProgramID:$routeParams.programID
+			ProgramID:$routeParams.ProgramID
 		}
 	}).then(function (response) {
 		//(response.data);
@@ -3347,6 +3343,32 @@ $scope.submitted = false  ;
         
 	});
 	}
+	else if ( $scope.reg!=undefined || $scope.case != undefined || $scope.org !=undefined){
+		alert('ss') ; 
+		$http({
+			method : 'POST' , 
+			url : 'http://yakensolution.cloudapp.net:80/DaleelElkheir/api/Case/GetFilteredCases' ,
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			data : {
+				lang : 'ar',
+				OrganizationID : $scope.org,
+				CategoryID : $scope.case , 
+				RegionID: $scope.reg
+			}
+		}).then(function(response){
+			console.log(response.Response) ;
+			//console.log(response.Response.length) ;
+			
+			$scope.Result = response.data.Response;
+			$scope.Events = response.data.Response;
+			
+		} , 
+		function(reponse){
+			
+		}) ;
+	}
 	else{
 			$http({
 		method: 'POST',
@@ -3361,6 +3383,7 @@ $scope.submitted = false  ;
 		//(response.data);
 		$scope.Result = response.data.Response;
 		$scope.Events = response.data.Response;
+				$scope.genSearch = $routeParams.keywSearch ; 
 		/*$scope.CausesSearch = function () {
 		    $scope.Events = response.data.Response;
 		};
@@ -3915,7 +3938,16 @@ myapp.controller('SeasonProjCtrl',['$scope', '$http', function ($scope, $http) {
 
 myapp.controller('OrgsCtrl',['$scope', '$http', function ($scope, $http) {
     window.scrollTo(0,0 );
+			$scope.totalDisplayed = 5;
+			$scope.load = false ; 
 
+	$scope.loadMore = function () {
+			  $scope.totalDisplayed += 5;  
+		};
+	$scope.loadless = function () {
+			  $scope.totalDisplayed -= 5;  
+		};
+		
 	$http({
 		method :"POST",
 		url:"http://yakensolution.cloudapp.net:80/DaleelElkheir/api/Organization/GetOrganizations",
@@ -3927,6 +3959,7 @@ myapp.controller('OrgsCtrl',['$scope', '$http', function ($scope, $http) {
 		}
 	}).then(function(response){
 		if(response.data.IsSuccess){
+			$scope.load = true ; 
 			$scope.Orgs = response.data.Response ; 
 		}
 	}) ; 
@@ -3999,7 +4032,7 @@ myapp.controller('OrgsCtrl',['$scope', '$http', function ($scope, $http) {
 			
 			$http({
 		method :"POST",
-		url:"http://yakensolution.cloudapp.net:80/DaleelElkheir/api/Organization/GetOrganizationsByRegion",
+		url:"http://yakensolution.cloudapp.net:80/DaleelElkheir/api/Organization/GetFilterOrganizations",
 		headers:{
 			'Content-Type' : 'application/json'
 		},
@@ -4009,7 +4042,8 @@ myapp.controller('OrgsCtrl',['$scope', '$http', function ($scope, $http) {
 		}
 	}).then(function(response){
 		if(response.data.IsSuccess){
-			$scope.Orgs = response.data.Response ; 
+			$scope.Orgs = response.data.Response ;
+			$scope.load = true ; 
 		}
 	}) ; 
 		}
@@ -4027,6 +4061,7 @@ myapp.controller('OrgsCtrl',['$scope', '$http', function ($scope, $http) {
 	}).then(function(response){
 		if(response.data.IsSuccess){
 			$scope.Orgs = response.data.Response ; 
+			$scope.load = true ; 
 		}
 	}) ; 
 		}
