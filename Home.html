@@ -249,7 +249,7 @@
 
                 <div class="row content important-causes-content">
                     <div class="col col-md-4 col-xs-6" ng-repeat="x in ucases | limitTo: 6">
-                        <div class="grid" ng-style="{'background-image':'url({{x.Image}})'}" style="background-size: 100% 100%">
+                        <div class="grid" ng-style="{'background-image':'url({{x.Image}})'}" style="background-size: 100% 100% ; overflow: hidden ; height: 250px">
                             <div class="details" >
                                 <span class="time-count">{{x.DueDate}}</span>
                                 <h3>{{x.Name}}</h3>
@@ -294,8 +294,8 @@
                 </div>
                 <!-- end section-title -->
                 <div class="row content important-causes-content">
-                    <div class="col col-md-4 col-xs-6" ng-repeat="Item in Result| limitTo: 5"  >
-                        <div class="grid" ng-style="{'background-image':'url({{Item.Image}})'}" style="background-size: 100% 100% " onerror="this.style.background-image='images/daleel.jpg'" >
+                    <div class="col col-md-4 col-xs-6" ng-repeat="Item in Result| limitTo: 6"   >
+                        <div class="grid" ng-style="{'background-image':'url({{Item.Image}})'}" style="background-size: 100% 100% ; overflow: hidden ; height: 250px " onerror="this.style.background-image='images/daleel.jpg'" >
                             <div class="details" >
                                 <span class="time-count">{{Item.DueDate}}</span>
                                 <h3>{{Item.Name}}</h3>
