@@ -1,4 +1,6 @@
 <header id="header" class="header-style-three">
+	
+	
 		<div class="topbar">
 			<div class="upper-topbar">
 				<div class="container">
@@ -105,7 +107,7 @@
 
 
 				</div>
-				<div class="col-xs-1"><img style="width: 130px ; margin-right:-50%" src="images/preloder.png"></div>
+				<div class="col-xs-1"><img class="img-header" src="images/preloder.png"></div>
 				
 			</div>
 			<!-- end of container -->
@@ -116,7 +118,7 @@
     <div class="page-wrapper home-style-three" onload="topScrolling()">
 
         <!-- start of hero -->
-        <section class="hero hero-style-three hero-slider-wrapper">
+        <section class="hero hero-style-three hero-slider-wrapper" >
             <!-- <div class="hero-slider">
                 <div class="slide">
                     <img src="images/slider/slide-3.jpg" alt>
@@ -199,14 +201,15 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 col-sm-6">
+                                    <!-- <div class="col-md-3 col-sm-6">
                                         <div class="form-group">
                                             <select name="category" id="category" class="form-control" style="height: 40px" ng-model="typCaseSearch" ng-options="x.ID as x.Name for x in category">
                                                 <option selected value="">نوع الحاله</option>
-                                                <!--<option ng-repeat="x in category">{{x.Name}}</option>-->
+                                                <option ng-repeat="x in category">{{x.Name}}</option>
                                             </select>
                                         </div>
                                     </div>
+                                     -->
                                     <div class="col-md-3 col-sm-6">
                                         <div class="form-group">
                                             <select name="category" id="category" class="form-control" style="height: 40px" ng-model="organSearch" ng-options="x.ID as x.Name for x in orgns">
@@ -295,7 +298,7 @@
                 <!-- end section-title -->
                 <div class="row content important-causes-content">
                     <div class="col col-md-4 col-xs-6" ng-repeat="Item in Result| limitTo: 6"   >
-                        <div class="grid" ng-style="{'background-image':'url({{Item.Image}})'}" style="background-size: 100% 100% ; overflow: hidden ; height: 250px " onerror="this.style.background-image='images/daleel.jpg'" >
+                        <div class="grid" ng-style="{'background-image':'url({{Item.Image}})'}" style="background-size: 100% 100% ; overflow: hidden ; height: 250px " >
                             <div class="details" >
                                 <span class="time-count">{{Item.DueDate}}</span>
                                 <h3>{{Item.Name}}</h3>
@@ -441,14 +444,14 @@
         <section class="cta-2">
             <div class="container-fluid">
                 <div class="row" >
-                    <div class="col col-md-6 col-sm-6">
-                        <img  src="images/join-us-bg.jpg" style="height: 300px">
+                    <div class="col col-md-5 col-sm-5">
+                        <img  src="images/images (1).png" style="height: 300px ;width: 100%">
                     </div>
 
-                    <div class="col col-md-5 col-sm-5 sing-up " style="height: 300px">
+                    <div class="col col-md-6 col-sm-6 sing-up " style="height: 300px">
                         <h3>
                             <span>
-                                <img src="images/sing-up-icon.png" alt>
+                                <img src="images/sing-up-icon.png" style="width:100%" alt>
                             </span> الاشتراك في برنامج المتطوعين</h3>
                         <span>خدمة الإنسانية</span>
                         <p>يمكنك الان الاشتراك معنا ....</p>

@@ -103,7 +103,7 @@
 
 
 				</div>
-								<div class="col-xs-1"><img style="width: 130px ; margin-right:-50%" src="images/preloder.png"></div>
+								<div class="col-xs-1"><img class="img-header" src="images/preloder.png"></div>
 
 			</div>
 			<!-- end of container -->
@@ -114,7 +114,7 @@
     <div class="page-wrapper about-page">
 
         <!-- start page-title -->
-        <section class="page-title"  style="height: 300px">
+        <section class="page-title"  style="height: 250px">
             <div class="page-title-bg"></div>
             <div class="container">
                 <div class="title-box">
@@ -133,32 +133,36 @@
 
 
         <!-- start about-details -->
-        <section class="about-us-st section-padding">
-			
-			<table class="table table-bordered">
+        <section class="about-us-st section-padding"  style="padding: 30px"> 
+			<div class="search">
+				<label class="text-info"  for="pname" style="cursor: pointer">بحث</label>
+				<input id="pname" ng-model="proname" type="text" style="border-radius: 5px" placeholder="اسم المشروع" ng-keyup = "filtering(proname)"> 
+			</div>
+			<div ng-repeat="x in SPro track by $index">
+			<table class="table table-bordered" >
  		<thead>
-				<tr>
-					<th>#</th>
-					<th>اسم الجمعية</th>
-					<th>الهدف</th>
-					<th>السعر</th>
-					<th>المنطقة</th>
+			<h2 class="text-center text-info" style="margin: 2% ;"><b>{{x.Name}}</b></h2>	
+
+				<tr >
+					<th style="text-align: center">اسم الجمعية</th>
+					<th style="text-align: center">الهدف</th>
+					<th style="text-align: center">السعر</th>
+					<th style="text-align: center">المنطقة</th>
 				</tr>
 			</thead>
 				<tbody>
-					<tr ng-repeat="x in SPro track by $index">
-					<td>{{$index + 1}}</td>
-				
-					<td>{{x.Name}}</td>
-				
-					<td>لا يوجد </td>
-				
-					<td>لا يوجد </td>
-					<td>لا يوجد </td>
+					<tr ng-repeat="act in x.activities" style="text-align: center">
+					<td>{{act.OrgName}}</td>
+					<td>{{act.Target}}</td>
+					<td>{{act.Price}}</td>
+					<td>{{act.Region}}</td>
 				</tr>
 				</tbody>
 			</table> 
-		</section>
+		</div>
+				</section>
+			
+			
         <!-- end about-details -->
 
     </div>
